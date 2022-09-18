@@ -1,0 +1,21 @@
+{
+	"name": "fcc-learn-npm-package-json",
+	"author": "Pranjal Shukla",
+	"description": "A project that teachs me Backend Development and APIs",
+	"keywords": ["This", "is", "a", "tutorial", "from", "freecodecamp"],
+	"license": "go crazy with learning its Freecodecamp",
+	"version": "1.2.0",
+	"dependencies": {
+		"//@freecodecamp/example": "~1.2.13",
+		"//@freecodecamp/example": "^1.2.13",
+		"express": "^4.14.0"
+	},
+	"main": "server.js",
+	"scripts": {
+		"start": "node server.js"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://idontknow/todo.git"
+	}
+}
