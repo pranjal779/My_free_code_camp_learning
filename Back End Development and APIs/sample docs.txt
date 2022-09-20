@@ -1,0 +1,7 @@
+{"_id":{"$numberInt":"1"},"name":"Pranjal Shukla","age":{"$numberInt":"27"},"favoriteFoods":["fried Chicken","daal","apple","mango"]}
+
+{"_id":{"$numberInt":"2"},"name":"Gabe","age":{"$numberInt":"42"},"favoriteFoods":["wabadubabuabalubbalub","ew-incest-stuff","clingy","rickest-pickle"]}
+
+{"_id":{"$numberInt":"3"},"name":"Hannah","age":{"$numberInt":"24"},"favoriteFoods":["mango","salad","tandori-butter-chicken"]}
+
+{"_id":{"$oid":"6328b8f181b9f939dc88de37"},"favoriteFoods":["chicken salad"],"name":"Gary","age":{"$numberInt":"46"},"__v":{"$numberInt":"0"}}

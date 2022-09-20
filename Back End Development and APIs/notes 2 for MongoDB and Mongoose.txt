@@ -1,1 +1,7 @@
 
+username for db and pass
+
+lrN4MyXPBqFaEonB
+----
+
+mongodb+srv://pranjal779:lrN4MyXPBqFaEonB@cluster0.13r9c5x.mongodb.net/?retryWrites=true&w=majority
