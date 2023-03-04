@@ -1,0 +1,21 @@
+{
+	"name": "fcc-learn-npm-package-json",
+  "author": "Pranjal Shukla",
+  "description": "Practice for backend knowledge ",
+  "keywords": ["Python", "JavaScript", "Replit", "AWS", "freecodecamp"],
+	"dependencies": {
+		"express": "^4.14.0",
+    "//@freecodecamp/example": "^1.2.13",
+    "//@freecodecamp/example": "~1.2.13"
+	},
+	"main": "server.js",
+	"scripts": {
+		"start": "node server.js"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://idontknow/todo.git"
+	},
+  "license": "MIT",
+  "version": "1.2.0"
+}
