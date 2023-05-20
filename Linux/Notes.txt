@@ -1,0 +1,116 @@
+login
+ssh student@ubuntu
+
+halt
+
+power
+
+
+shutdown -r
+
+
+
+sudo shutdown -h 10:00 :Shutting down for scheduled maintenance"
+
+
+----
+
+Locating Application
+
+/bin or /usr/bin or /sbin or /usr/sbin
+
+/opt 
+
+/usr/local/bin
+or
+/usr/local/sbin
+
+
+
+/home/student/bin
+
+$which diff
+/usr/bin/diff
+
+or
+whereis diff
+whereis firefox
+
+echo $HOME
+
+---
+Exploring the Filesystem
+
+tree -d /
+
+----
+
+Hard links or soft links
+
+ln file1 file2
+
+ls -li file1 file2
+
+soft link or symbolic links
+
+ln -s file1 file3
+
+ls -li file1 file3
+
+----
+
+Navigating the Directory History
+
+cd -
+
+pushd
+
+mkdir /tmp/dir1 /tmp/dir2
+pushd /tmp/dir1
+
+pushd /tmp/dir2
+
+popd
+
+popd
+----------
+
+working with Files
+[2:36:18]
+ 
+wc read-for .sh
+
+
+
+cat ready-for.sh
+ 
+less ready-for.sh
+
+less -N ready-for.sh
+
+head ready-for.sh
+
+head -20 ready-for.sh
+
+tail ready-for.sh
+
+tail -20 ready-for.sh
+
+tac ready-for.sh
+-----
+
+Touch
+touch <filename>
+
+touch -t (somevalues for time date/time) <filename>
+---
+mkdir
+
+mkdir /usr/sampdir
+
+rmdir - to remove a directory
+
+a dir must be empty to use rmdir <dirname> otherwise it will fail.
+
+or
+rm -rf to remove the dir and all of its content
