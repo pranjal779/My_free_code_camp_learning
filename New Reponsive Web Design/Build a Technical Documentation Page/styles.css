@@ -1,0 +1,5 @@
+@media (max-with: 700px) {
+  #navbar {
+    width: 500px;
+  }
+}
