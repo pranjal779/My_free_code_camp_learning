@@ -1,0 +1,29 @@
+Mnemonic Variable Name -Python
+
+string conversion
+
+User input
+
+onverting User Input 16:18
+
+Conditional Execution
+	comparsion IF
+
+	One-Way Decisions (3:50)
+
+	Indentation
+
+	Tabs (5:41)
+
+	9:32
+
+	Nested Decisions (10:29)
+
+	Two-way Decisions (11:05)
+
+Conditional Execution B
+	Multi-way
+
+	The try / execpt Structure
+
+	
