@@ -26,4 +26,30 @@ Conditional Execution B
 
 	The try / execpt Structure
 
-	
+functions
+
+	stored and reused steps
+
+	python Functions
+
+	new reserved words
+
+	max functions
+
+	Type Conversions
+
+	String Conversions
+
+what is the purpose of the def keyword in python?
+It indicates the start of a function, and the following indented section of code is to be stored for later.
+
+Return Values
+
+	Building our Own Functions
+
+	define a function + invoke a function + reuse it
+
+	Arguments
+
+	Parameters
+
