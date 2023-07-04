@@ -53,3 +53,32 @@ Return Values
 
 	Parameters
 
+	Return Values (Return Statement)
+	
+	Arguments, Parameters and Results
+
+	Multiple Parameter / Arguments
+
+Loops and Iteration - Chapter 5 
+
+	....
+	Finishing an Iteration with continue
+
+	
+	indefinite loops
+
+Definite loops
+
+	Definite loop with strings
+
+Iterations: Loop Idioms
+
+chapter 6: strings
+
+..
+..
+
+String Comparison	
+
+
+Files as a Sequence
