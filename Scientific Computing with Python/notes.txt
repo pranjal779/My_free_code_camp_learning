@@ -82,3 +82,65 @@ String Comparison
 
 
 Files as a Sequence
+
+ch 8 Python Lists:
+	Looking Inside Lists
+	lists are mutable
+	len()
+	range()
+	
+Working with lists:
+	List Methods
+	is something in the list (in {or} not in)
+	list are in orders - sort()
+	Built-in Functions and lists
+		-len()
+		-max()
+		-min()
+		-sum()
+		-sum(nums)/len(nums)
+
+strings and Lists:
+
+	----
+	What does n equal in this code?
+
+	words = 'His e-mail is q-lar@freecodecamp.org'
+	pieces = words.split()
+	parts = pieces[3].split('-')
+	n = parts[1]
+
+	mail
+
+
+	q
+
+
+	lar
+
+
+	lar@freecodecamp.org
+	----
+
+	split()
+	
+	
+
+	The .startswith function used in chapter 8C works better than the != 	to prevent the traceback. you can put the compound conditional in any order with .startswith and it will work.
+
+	rawfile=open('mbox-short.txt')
+	for iteration in rawfile:
+	    iteration=iteration.rstrip()
+	    split=iteration.split()
+	    if not iteration.startswith("From") or len(split)<3:
+	        continue
+	    print(split[2])
+
+
+How to debug or bug testing while coding check the ex8-1 ... .py files for context
+
+
+___
+
+Python Dictionaries
+
