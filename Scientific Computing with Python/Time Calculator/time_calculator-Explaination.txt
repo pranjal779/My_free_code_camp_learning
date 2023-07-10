@@ -1,0 +1,31 @@
+Here's an explanation of the code for the `add_time` function:
+
+1. The function takes three parameters: `start` (the start time), `duration` (the duration to add), and `day_of_week` (optional parameter indicating the starting day of the week).
+
+2. The `days_of_the_week_index` dictionary maps the lowercase names of the days of the week to their corresponding index (0 for Monday, 1 for Tuesday, etc.).
+
+3. The `days_of_the_week_array` list contains the capitalized names of the days of the week in the correct order.
+
+4. The `duration` and `start` times are split into hours and minutes using the `partition` method.
+
+5. The code calculates the number of days (`amount_of_days`) to add based on the duration.
+
+6. The minutes of the start time and duration are added together, taking care of carrying over to the hours if necessary.
+
+7. The code determines the number of AM/PM flips (`amount_of_am_pm_flips`) based on the combined hours of the start time and duration.
+
+8. The hours for the end time are calculated by adding the start hours and duration hours, taking into account the AM/PM flips and converting to 12-hour format.
+
+9. The minutes and hours are formatted into strings with leading zeros if necessary.
+
+10. If the start time is in the afternoon (PM) and the combined hours (start hours + duration hours) reach or exceed 12, an extra day is added to `amount_of_days`.
+
+11. The AM/PM indicator (`am_or_pm`) is updated based on the number of AM/PM flips.
+
+12. The returnTime string is constructed with the formatted hours, minutes, and AM/PM indicator.
+
+13. If the `day_of_week` parameter is provided, the starting day of the week is determined based on the index and adjusted by `amount_of_days`. The corresponding day is appended to the returnTime string.
+
+14. Finally, the code checks the value of `amount_of_days` to determine whether to add the "(next day)" or "(n days later)" suffix to the returnTime string.
+
+These updates address the issues in the original code and should provide the expected results for the given test cases.
