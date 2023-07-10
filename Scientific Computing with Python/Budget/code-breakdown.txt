@@ -1,0 +1,64 @@
+
+
+1. `truncate(n)` function:
+   - This function takes a number `n` as input.
+   - It multiplies `n` by a multiplier of 10 and converts the result to an integer.
+   - Finally, it divides the integer value by the multiplier and returns the result.
+   - The purpose of this function is to truncate a number to two decimal places.
+
+2. `getTotals(categories)` function:
+   - This function takes a list of `categories` as input.
+   - It initializes a variable `total` to 0 and an empty list `breakdown`.
+   - It iterates over each `category` in the `categories` list.
+   - Inside the loop, it adds the result of calling the `get_withdrawls()` method on each `category` to the `total` variable.
+   - It also appends the same result to the `breakdown` list.
+   - After the loop, it uses the `map()` function along with a lambda function to divide each value in the `breakdown` list by the `total` and truncate the result using the `truncate()` function.
+   - The truncated values are then converted into a list and assigned to the `rounded` variable.
+   - Finally, it returns the `rounded` list.
+
+3. `create_spend_chart(categories)` function:
+   - This function takes a list of `categories` as input.
+   - It initializes an empty string `res` with the header "Percentage spent by category".
+   - It sets the initial value of `i` to 100.
+   - It calls the `getTotals()` function to get the rounded percentages of spending for each category and assigns the result to the `totals` variable.
+   - The function enters a while loop that continues as long as `i` is greater than or equal to 0.
+   - Inside the loop, it initializes a string `chart_spaces` with a space character.
+   - It iterates over each `total` in the `totals` list.
+   - If the percentage value (`total * 100`) is greater than or equal to `i`, it appends "o " to the `chart_spaces` string. Otherwise, it appends two spaces.
+   - It appends the current `i` value, right-justified to three characters, followed by `|` and the `chart_spaces` string to the `res` string.
+   - It then decreases the value of `i` by 10.
+   - After the while loop, it creates a string `dashes` consisting of a hyphen followed by three hyphens repeated for the number of categories.
+   - It initializes an empty list `names` and an empty string `x_axis`.
+   - It iterates over each `category` in the `categories` list and appends the `name` of each `category` to the `names` list.
+   - It finds the maximum length of the names in the `names` list and assigns it to `maxi`.
+   - It enters a for loop that iterates over the range of the length of `maxi`.
+   - Inside the loop, it initializes a string `nameStr` with five spaces.
+   - It iterates over each `name` in the `names` list.
+   - If the current index `x` is greater than or equal to the length of the current `name`, it appends two spaces to the `nameStr` string. Otherwise, it appends the character at index `x` of the current `name` followed by a space.
+   - If the current index `x` is not the last index of `maxi`, it appends a newline character to the `nameStr` string.
+   - It adds the `nameStr` string to the `x_axis` string.
+   - Finally, it appends the `dashes` string, right-justified to the length of `dashes` plus four characters, followed by a newline character, and the `x_axis` string to the `res` string.
+   - It returns the `res` string, which represents the bar chart.
+
+4. `Category` class:
+   - The `Category` class represents a budget category.
+   - It has an `__init__` method that initializes the `name` and `ledger` attributes.
+   - The `name` attribute represents the name of the category, and the `ledger` attribute is a list that stores the financial transactions (deposits and withdrawals) for the category.
+   - The `__str__` method provides a string representation of the category.
+   - It creates a title string using the `name` attribute centered in 30 characters.
+   - It initializes an empty string `items` and a variable `total` to keep track of the total amount.
+   - It iterates over each `item` in the `ledger` list.
+   - Inside the loop, it appends a formatted string to the `items` string, displaying the description (truncated to 23 characters) and amount (right-aligned with two decimal places) of each item.
+   - It also adds the item's amount to the `total` variable.
+   - After the loop, it creates the output string by concatenating the title, items, and total.
+   - It returns the output string.
+   
+   The `Category` class also has several methods:
+   - The `deposit` method adds a deposit transaction to the `ledger` list.
+   - The `withdraw` method adds a withdrawal transaction (stored as a negative amount) to the `ledger` list if there are sufficient funds available.
+   - The `get_balance` method calculates and returns the current balance of the category based on the deposits and withdrawals in the `ledger`.
+   - The `transfer` method transfers an amount from the current category to another category, updating both ledgers if there are sufficient funds.
+   - The `check_funds` method checks if the amount is greater than the balance of the category and returns `True` or `False`.
+   - The `get_withdrawls` method calculates and returns the total amount of withdrawals (negative amounts) in the `ledger`.
+
+This breakdown should help you understand the functionality and purpose of each part of the code.
