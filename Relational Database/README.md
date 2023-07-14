@@ -1,16 +1,12 @@
 before proceding read this:
 
-https://forum.freecodecamp.org/t/running-the-relational-database-curriculum-in-your-browser/500231
-
-
+<h2><a href="https://forum.freecodecamp.org/t/running-the-relational-database-curriculum-in-your-browser/500231">
 **Running the Relational Database Curriculum in your Browser**
+</a></h2>
 
+<h2>About the Course</h2>
 
-
-About the Course
-
-
-Relational Database
+<h1>Relational Database</h1>
 
 
 For these courses, you will use real developer tools and software including VS Code, PostgreSQL, and the Linux / Unix command line to complete interactive tutorials and build projects.
