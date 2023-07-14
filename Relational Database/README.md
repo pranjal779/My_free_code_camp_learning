@@ -19,3 +19,6 @@ Finally, you will learn Git, the version control system, an essential tool of ev
 
 
 https://www.freecodecamp.org/news/how-to-run-freecodecamps-relational-databases-curriculum-using-docker-vscode-and-coderoad/
+
+
+PostgreSQL is an object-relational database management system (ORDBMS)
