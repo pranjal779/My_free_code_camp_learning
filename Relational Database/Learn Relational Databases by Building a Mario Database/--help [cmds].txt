@@ -1,0 +1,40 @@
+postgres-> \h CREATE DATABASE
+Command:     CREATE DATABASE
+Description: create a new database
+Syntax:
+CREATE DATABASE name
+    [ [ WITH ] [ OWNER [=] user_name ]
+           [ TEMPLATE [=] template ]
+           [ ENCODING [=] encoding ]
+           [ LC_COLLATE [=] lc_collate ]
+           [ LC_CTYPE [=] lc_ctype ]
+           [ TABLESPACE [=] tablespace_name ]
+           [ ALLOW_CONNECTIONS [=] allowconn ]
+           [ CONNECTION LIMIT [=] connlimit ]
+           [ IS_TEMPLATE [=] istemplate ] ]
+
+URL: https://www.postgresql.org/docs/12/sql-createdatabase.html
+
+postgres-> 
+
+postgres=> \l
+                                 List of databases
++-----------+--------------+----------+---------+---------+-----------------------+
+|   Name    |    Owner     | Encoding | Collate |  Ctype  |   Access privileges   |
++-----------+--------------+----------+---------+---------+-----------------------+
+| postgres  | postgres     | UTF8     | C.UTF-8 | C.UTF-8 |                       |
+| template0 | postgres     | UTF8     | C.UTF-8 | C.UTF-8 | =c/postgres          +|
+|           |              |          |         |         | postgres=CTc/postgres |
+| template1 | postgres     | UTF8     | C.UTF-8 | C.UTF-8 | =c/postgres          +|
+|           |              |          |         |         | postgres=CTc/postgres |
+| universe  | freecodecamp | UTF8     | C.UTF-8 | C.UTF-8 |                       |
++-----------+--------------+----------+---------+---------+-----------------------+
+(4 rows)
+
+postgres=> \h \l
+
+
+The \i command reads in commands from the specified file. psql's -s option puts you in single step mode which pauses before sending each statement to the server. The commands used in this section are in the file basics.sql.
+
+
+
