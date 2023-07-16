@@ -388,5 +388,455 @@ second_database=>                      Table "public.second_table"
 
 second_database=> 
 
+There's two columns. You won't need either of them for the Mario database. Alter the table second_table and drop the column username.
+
+second_database=> ALTER TABLE second_table DROP COLUMN username;
+second_database=> ALTER TABLE
+
+second_database=> 
+
+Next, drop the id column.
+
+second_database=> ALTER TABLE second_table DROP COLUMN id;
+second_database=> ALTER TABLE
+
+second_database=> 
 
 
+Okay, the table has no rows or columns left. View the tables in this database to see what is here.
+
+\d
+second_database=>                List of relations
++--------+--------------+-------+--------------+
+| Schema |     Name     | Type  |    Owner     |
++--------+--------------+-------+--------------+
+| public | first_table  | table | freecodecamp |
+| public | second_table | table | freecodecamp |
++--------+--------------+-------+--------------+
+(2 rows)
+
+
+Still two. You won't need either of those for the new database either. Drop second_table from your database. Here's an example:
+
+DROP TABLE table_name;
+
+second_database=> DROP TABLE second_table;
+DROP TABLE
+second_database=> 
+
+Next, drop first_table from the database.
+
+second_database=> DROP TABLE first_table;
+second_database=> DROP TABLE
+
+second_database=> 
+
+
+All the tables are gone now, too. View all the databases using the command to list them.
+
+second_database=> \l
+second_database=>                                     List of databases
++-----------------+--------------+----------+---------+---------+-----------------------+
+|      Name       |    Owner     | Encoding | Collate |  Ctype  |   Access privileges   |
++-----------------+--------------+----------+---------+---------+-----------------------+
+| first_database  | freecodecamp | UTF8     | C.UTF-8 | C.UTF-8 |                       |
+| postgres        | postgres     | UTF8     | C.UTF-8 | C.UTF-8 |                       |
+| second_database | freecodecamp | UTF8     | C.UTF-8 | C.UTF-8 |                       |
+| template0       | postgres     | UTF8     | C.UTF-8 | C.UTF-8 | =c/postgres          +|
+|                 |              |          |         |         | postgres=CTc/postgres |
+| template1       | postgres     | UTF8     | C.UTF-8 | C.UTF-8 | =c/postgres          +|
+|                 |              |          |         |         | postgres=CTc/postgres |
++-----------------+--------------+----------+---------+---------+-----------------------+
+(5 rows)
+
+
+second_database=> 
+
+
+Rename first_database to mario_database. You can rename a database like this:
+
+ALTER DATABASE database_name RENAME TO new_database_name;
+
+
+second_database=> ALTER DATABASE first_database RENAME TO mario_database;
+second_database=> ALTER DATABASE
+
+second_database=> 
+
+
+
+List the databases to make sure it got renamed.
+
+second_database=> \l
+                                    List of databases
++-----------------+--------------+----------+---------+---------+-----------------------+
+|      Name       |    Owner     | Encoding | Collate |  Ctype  |   Access privileges   |
++-----------------+--------------+----------+---------+---------+-----------------------+
+| mario_database  | freecodecamp | UTF8     | C.UTF-8 | C.UTF-8 |                       |
+| postgres        | postgres     | UTF8     | C.UTF-8 | C.UTF-8 |                       |
+| second_database | freecodecamp | UTF8     | C.UTF-8 | C.UTF-8 |                       |
+| template0       | postgres     | UTF8     | C.UTF-8 | C.UTF-8 | =c/postgres          +|
+|                 |              |          |         |         | postgres=CTc/postgres |
+| template1       | postgres     | UTF8     | C.UTF-8 | C.UTF-8 | =c/postgres          +|
+|                 |              |          |         |         | postgres=CTc/postgres |
++-----------------+--------------+----------+---------+---------+-----------------------+
+(5 rows)
+
+second_database=> 
+
+Connect to your newly named database so you can start adding your characters.
+
+second_database=> \c mario_database;
+You are now connected to database "mario_database" as user "freecodecamp".
+
+Now that you aren't connected to second_database, you can drop it. Use the DROP DATABASE keywords to do that
+
+
+mario_database=> DROP DATABASE second_database;
+mario_database=> DROP DATABASE
+
+
+List the databases again to make sure it's gone.
+
+mario_database=> \l
+mario_database=>                                    List of databases
++----------------+--------------+----------+---------+---------+-----------------------+
+|      Name      |    Owner     | Encoding | Collate |  Ctype  |   Access privileges   |
++----------------+--------------+----------+---------+---------+-----------------------+
+| mario_database | freecodecamp | UTF8     | C.UTF-8 | C.UTF-8 |                       |
+| postgres       | postgres     | UTF8     | C.UTF-8 | C.UTF-8 |                       |
+| template0      | postgres     | UTF8     | C.UTF-8 | C.UTF-8 | =c/postgres          +|
+|                |              |          |         |         | postgres=CTc/postgres |
+| template1      | postgres     | UTF8     | C.UTF-8 | C.UTF-8 | =c/postgres          +|
+|                |              |          |         |         | postgres=CTc/postgres |
++----------------+--------------+----------+---------+---------+-----------------------+
+(4 rows)
+
+Okay, I think you're ready to get started. I don't think you created any tables here, take a look to make sure.
+
+\d
+
+
+Create a new table named characters, it will hold some basic information about Mario characters.
+
+mario_database=> CREATE TABLE characters();
+mario_database=> CREATE TABLE
+
+mario_database=> 
+
+Next, you can add some columns to the table. Add a column named character_id to your new table that is a type of SERIAL.
+
+
+mario_database=> ALTER TABLE characters ADD COLUMN character_id SERIAL;
+mario_database=> ALTER TABLE
+
+
+The SERIAL type will make your column an INT with a NOT NULL constraint, and automatically increment the integer when a new row is added. View the details of the characters table to see what SERIAL did for you.
+
+mario_database=> \d characters
+mario_database=>                                      Table "public.characters"
++--------------+---------+-----------+----------+--------------------------------------------------+
+|    Column    |  Type   | Collation | Nullable |                     Default                      |
++--------------+---------+-----------+----------+--------------------------------------------------+
+| character_id | integer |           | not null | nextval('characters_character_id_seq'::regclass) |
++--------------+---------+-----------+----------+--------------------------------------------------+
+
+
+mario_database=> 
+
+codeally@7609b683a5eb:~/project$ psql --username=freecodecamp --dbname=postgres
+Border style is 2.
+Title is " ".
+Pager usage is off.
+psql (12.9 (Ubuntu 12.9-2.pgdg20.04+1))
+Type "help" for help.
+
+postgres=> \l
+                                   List of databases
++----------------+--------------+----------+---------+---------+-----------------------+
+|      Name      |    Owner     | Encoding | Collate |  Ctype  |   Access privileges   |
++----------------+--------------+----------+---------+---------+-----------------------+
+| mario_database | freecodecamp | UTF8     | C.UTF-8 | C.UTF-8 |                       |
+| postgres       | postgres     | UTF8     | C.UTF-8 | C.UTF-8 |                       |
+| template0      | postgres     | UTF8     | C.UTF-8 | C.UTF-8 | =c/postgres          +|
+|                |              |          |         |         | postgres=CTc/postgres |
+| template1      | postgres     | UTF8     | C.UTF-8 | C.UTF-8 | =c/postgres          +|
+|                |              |          |         |         | postgres=CTc/postgres |
++----------------+--------------+----------+---------+---------+-----------------------+
+(4 rows)
+
+postgres=> \c mario_database 
+You are now connected to database "mario_database" as user "freecodecamp".
+mario_database=> \d
+mario_database=>                         List of relations
++--------+-----------------------------+----------+--------------+
+| Schema |            Name             |   Type   |    Owner     |
++--------+-----------------------------+----------+--------------+
+| public | characters                  | table    | freecodecamp |
+| public | characters_character_id_seq | sequence | freecodecamp |
++--------+-----------------------------+----------+--------------+
+(2 rows)
+
+
+mario_database=> \d characters
+                                     Table "public.characters"
++--------------+---------+-----------+----------+--------------------------------------------------+
+|    Column    |  Type   | Collation | Nullable |                     Default                      |
++--------------+---------+-----------+----------+--------------------------------------------------+
+| character_id | integer |           | not null | nextval('characters_character_id_seq'::regclass) |
++--------------+---------+-----------+----------+--------------------------------------------------+
+
+mario_database=> \d characters_character_id_seq 
+mario_database=>              Sequence "public.characters_character_id_seq"
++---------+-------+---------+------------+-----------+---------+-------+
+|  Type   | Start | Minimum |  Maximum   | Increment | Cycles? | Cache |
++---------+-------+---------+------------+-----------+---------+-------+
+| integer |     1 |       1 | 2147483647 |         1 | no      |     1 |
++---------+-------+---------+------------+-----------+---------+-------+
+Owned by: public.characters.character_id
+
+
+mario_database=>
+
+Add a column to characters called name. Give it a data type of VARCHAR(30), and a constraint of NOT NULL. Add a constraint by putting it right after the data type.
+
+mario_database=> ALTER TABLE characters ADD COLUMN name VARCHAR(30) NOT NULL;
+mario_database=> ALTER TABLE
+
+mario_database=> 
+
+You can make another column for where they are from. Add another column named homeland. Give it a data type of VARCHAR that has a max length of 60.
+
+mario_database=> ALTER TABLE characters ADD COLUMN homeland VARCHAR(60);
+ALTER TABLE
+mario_database=> 
+
+
+Video game characters are quite colorful. Add one more column named favorite_color. Make it a VARCHAR with a max length of 30.
+
+mario_database=> ALTER TABLE characters ADD COLUMN favorite_color VARCHAR(30);
+mario_database=> ALTER TABLE
+
+mario_database=> 
+
+You should have four columns in characters. Take a look at the details of it to see how things are going.
+
+mario_database=> \d characters
+mario_database=>                                              Table "public.characters"
++----------------+-----------------------+-----------+----------+--------------------------------------------------+
+|     Column     |         Type          | Collation | Nullable |                     Default                      |
++----------------+-----------------------+-----------+----------+--------------------------------------------------+
+| character_id   | integer               |           | not null | nextval('characters_character_id_seq'::regclass) |
+| name           | character varying(30) |           | not null |                                                  |
+| homeland       | character varying(60) |           |          |                                                  |
+| favorite_color | character varying(30) |           |          |                                                  |
++----------------+-----------------------+-----------+----------+--------------------------------------------------+
+
+
+mario_database=> 
+
+
+You are ready to start adding some rows. First is Mario. Earlier, you used this command to add a row:
+
+INSERT INTO second_table(id, username) VALUES(1, 'Samus');
+The first parenthesis is for the column names, you can put as many columns as you want. The second parenthesis is for the values for those columns. Add a row to your table, give it a name of Mario, a homeland of Mushroom Kingdom, and a favorite_color of Red. Make sure to use single quotes where needed.
+
+mario_database=> INSERT INTO characters(name, homeland, favorite_color) VALUES('Mario', 'Mushroom Kingdom', 'Red');
+mario_database=> INSERT 0 1
+
+mario_database=> 
+
+
+Mario should have a row now and his character_id should have been automatically added. View all the data in your characters table with SELECT to see this.
+
+mario_database=> SELECT * FROM characters;
+                              
++--------------+-------+------------------+----------------+
+| character_id | name  |     homeland     | favorite_color |
++--------------+-------+------------------+----------------+
+|            1 | Mario | Mushroom Kingdom | Red            |
++--------------+-------+------------------+----------------+
+(1 row)
+
+mario_database=> 
+
+Add another row for Luigi. Give it a name of Luigi, a homeland of Mushroom Kingdom, and a favorite_color of Green.
+
+mario_database=> INSERT INTO characters(name, homeland, favorite_color) VALUES('luigi', 'Mushroom Kingdom', 'Green');
+INSERT 0 1
+mario_database=> \d characters
+                                             Table "public.characters"
++----------------+-----------------------+-----------+----------+--------------------------------------------------+
+|     Column     |         Type          | Collation | Nullable |                     Default                      |
++----------------+-----------------------+-----------+----------+--------------------------------------------------+
+| character_id   | integer               |           | not null | nextval('characters_character_id_seq'::regclass) |
+| name           | character varying(30) |           | not null |                                                  |
+| homeland       | character varying(60) |           |          |                                                  |
+| favorite_color | character varying(30) |           |          |                                                  |
++----------------+-----------------------+-----------+----------+--------------------------------------------------+
+
+
+mario_database=> SELECT * FROM characters;
+                              
++--------------+-------+------------------+----------------+
+| character_id | name  |     homeland     | favorite_color |
++--------------+-------+------------------+----------------+
+|            1 | Mario | Mushroom Kingdom | Red            |
+|            2 | luigi | Mushroom Kingdom | Green          |
++--------------+-------+------------------+----------------+
+(2 rows)
+
+mario_database=> DELETE FROM characters WHERE name='luigi';
+mario_database=> DELETE 1
+
+mario_database=> SELECT * FROM characters;
+mario_database=>                               
++--------------+-------+------------------+----------------+
+| character_id | name  |     homeland     | favorite_color |
++--------------+-------+------------------+----------------+
+|            1 | Mario | Mushroom Kingdom | Red            |
++--------------+-------+------------------+----------------+
+(1 row)
+
+
+mario_database=> INSERT INTO characters(name, homeland, favorite_color) VALUES('Luigi', 'Mushroom Kingdom', 'Green');
+INSERT 0 1
+mario_database=> 
+
+
+
+View all the data in your characters table with SELECT again.
+
+mario_database=> SELECT * FROM characters;
+mario_database=>                               
++--------------+-------+------------------+----------------+
+| character_id | name  |     homeland     | favorite_color |
++--------------+-------+------------------+----------------+
+|            1 | Mario | Mushroom Kingdom | Red            |
+|            3 | Luigi | Mushroom Kingdom | Green          |
++--------------+-------+------------------+----------------+
+(2 rows)
+
+
+mario_database=> 
+
+Okay, it looks like it's all working. Add another row for Peach. Give her the values: Peach, Mushroom Kingdom, and Pink.
+
+mario_database=> INSERT INTO characters(name, homeland, favorite_color) VALUES('Peach', 'Mushroom Kingdom', 'Pink');
+mario_database=> INSERT 0 1
+
+mario_database=>
+
+
+Adding rows one at a time is quite tedious. Here's an example of how you could have added the previous three rows at once:
+
+INSERT INTO characters(name, homeland, favorite_color)
+VALUES('Mario', 'Mushroom Kingdom', 'Red'),
+('Luigi', 'Mushroom Kingdom', 'Green'),
+('Peach', 'Mushroom Kingdom', 'Pink');
+Add two more rows. Give the first one the values: Toadstool, Mushroom Kingdom, and Red. Give the second one: Bowser, Mushroom Kingdom, and Green. Try to add them with one command.
+
+mario_database=> INSERT INTO characters(name, homeland, favorite_color)
+mario_database-> VALUES('Toadstool', 'Mushroom Kingdom', 'Red'),
+mario_database-> ('Bowser', 'Mushroom Kingdom', 'Green');
+INSERT 0 2
+mario_database=> 
+
+
+If you don't get a message after a command, it is likely incomplete. This is because you can put a command on multiple lines. Add two more rows. Give the first one the values: Daisy, Sarasaland, and Yellow. The second: Yoshi, Dinosaur Land, and Green. Try to do it with one command.
+
+mario_database=> INSERT INTO characters(name, homeland, favorite_color)
+VALUES('Daisy', 'Sarasaland', 'Yellow'),
+('Yoshi', 'Dinosaur', 'Green');
+INSERT 0 2
+mario_database=> INSERT INTO characters(name, homeland, favorite_color)
+mario_database-> VALUES('Daisy', 'Sarasaland', 'Yellow'),
+mario_database-> ('Yoshi', 'Dinosaur Land', 'Green');
+mario_database=> INSERT 0 2
+
+mario_database=> SELECT * FROM characters;
+                                
++--------------+-----------+------------------+----------------+
+| character_id |   name    |     homeland     | favorite_color |
++--------------+-----------+------------------+----------------+
+|            1 | Mario     | Mushroom Kingdom | Red            |
+|            2 | Luigi     | Mushroom Kingdom | Green          |
+|            3 | Peach     | Mushroom Kingdom | Pink           |
+|            4 | Toadstool | Mushroom Kingdom | Red            |
+|            5 | Bowser    | Mushroom Kingdom | Green          |
+|            6 | Daisy     | Sarasaland       | Yellow         |
+|            7 | Yoshi     | Dinosaur         | Green          |
+|            8 | Daisy     | Sarasaland       | Yellow         |
+|            9 | Yoshi     | Dinosaur Land    | Green          |
++--------------+-----------+------------------+----------------+
+(9 rows)
+
+mario_database=> DELETE FROM characters WHERE homeland='Dinosaur' AND character_id='6';
+mario_database=> DELETE 0
+
+mario_database=> SELECT * FROM characters;
+mario_database=>                                 
++--------------+-----------+------------------+----------------+
+| character_id |   name    |     homeland     | favorite_color |
++--------------+-----------+------------------+----------------+
+|            1 | Mario     | Mushroom Kingdom | Red            |
+|            2 | Luigi     | Mushroom Kingdom | Green          |
+|            3 | Peach     | Mushroom Kingdom | Pink           |
+|            4 | Toadstool | Mushroom Kingdom | Red            |
+|            5 | Bowser    | Mushroom Kingdom | Green          |
+|            6 | Daisy     | Sarasaland       | Yellow         |
+|            7 | Yoshi     | Dinosaur         | Green          |
+|            8 | Daisy     | Sarasaland       | Yellow         |
+|            9 | Yoshi     | Dinosaur Land    | Green          |
++--------------+-----------+------------------+----------------+
+(9 rows)
+
+
+mario_database=> DELETE FROM characters WHERE homeland='Dinosaur';
+mario_database=> DELETE 1
+SELECT * FROM characters;
+                                
++--------------+-----------+------------------+----------------+
+| character_id |   name    |     homeland     | favorite_color |
++--------------+-----------+------------------+----------------+
+|            1 | Mario     | Mushroom Kingdom | Red            |
+|            2 | Luigi     | Mushroom Kingdom | Green          |
+|            3 | Peach     | Mushroom Kingdom | Pink           |
+|            4 | Toadstool | Mushroom Kingdom | Red            |
+|            5 | Bowser    | Mushroom Kingdom | Green          |
+|            6 | Daisy     | Sarasaland       | Yellow         |
+|            8 | Daisy     | Sarasaland       | Yellow         |
+|            9 | Yoshi     | Dinosaur Land    | Green          |
++--------------+-----------+------------------+----------------+
+(8 rows)
+
+mario_database=> DELETE FROM characters WHERE character_id=6;
+mario_database=> DELETE 1
+
+mario_database=> SELECT * FROM characters;
+                                
++--------------+-----------+------------------+----------------+
+| character_id |   name    |     homeland     | favorite_color |
++--------------+-----------+------------------+----------------+
+|            1 | Mario     | Mushroom Kingdom | Red            |
+|            2 | Luigi     | Mushroom Kingdom | Green          |
+|            3 | Peach     | Mushroom Kingdom | Pink           |
+|            4 | Toadstool | Mushroom Kingdom | Red            |
+|            5 | Bowser    | Mushroom Kingdom | Green          |
+|            8 | Daisy     | Sarasaland       | Yellow         |
+|            9 | Yoshi     | Dinosaur Land    | Green          |
++--------------+-----------+------------------+----------------+
+(7 rows)
+
+mario_database=> ^C
+mario_database=> 
+
+Take a look at all the data in your table with SELECT to see where you stand.
+
+mario_database=> SELECT * FROM characters;
+mario_database=> 
+
+
+
+
+-------
