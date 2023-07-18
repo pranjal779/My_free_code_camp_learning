@@ -837,6 +837,404 @@ mario_database=> SELECT * FROM characters;
 mario_database=> 
 
 
+It looks good, but there's a few mistakes. You can change a value like this:
+
+UPDATE table_name SET column_name=new_value WHERE condition;
+You used username='Samus' as a condition earlier. SET Daisy's favorite_color to Orange. You can use the condition name='Daisy' to change her row.
+
+mario_database=> UPDATE characters SET favorite_color='Orange' WHERE name='Daisy';
+mario_database=> UPDATE 1
+
+mario_database=> 
+
+
+The command you just used does exactly what it sounds like. It finds the row where name is Daisy, and sets her favorite_color to Orange. Take a look at all the data in your table again to see if she got updated.
+
+mario_database=> SELECT * FROM characters;
+mario_database=>                                 
++--------------+-----------+------------------+----------------+
+| character_id |   name    |     homeland     | favorite_color |
++--------------+-----------+------------------+----------------+
+|            1 | Mario     | Mushroom Kingdom | Red            |
+|            2 | Luigi     | Mushroom Kingdom | Green          |
+|            3 | Peach     | Mushroom Kingdom | Pink           |
+|            4 | Toadstool | Mushroom Kingdom | Red            |
+|            5 | Bowser    | Mushroom Kingdom | Green          |
+|            7 | Yoshi     | Dinosaur Land    | Green          |
+|            6 | Daisy     | Sarasaland       | Orange         |
++--------------+-----------+------------------+----------------+
+(7 rows)
+
+
+mario_database=>
+
+Her favorite color was updated. Toadstool's name is wrong as well, it's actually Toad. Use UPDATE to SET his name to Toad. Use the condition favorite_color='Red'.
+
+
+mario_database=> UPDATE characters SET name='Toad' WHERE favorite_color='Red';
+UPDATE 2
+mario_database=> 
+
+
+Take a look at all the data in your table.
+
+mario_database=> SELECT * FROM characters;
+mario_database=>                                
++--------------+--------+------------------+----------------+
+| character_id |  name  |     homeland     | favorite_color |
++--------------+--------+------------------+----------------+
+|            2 | Luigi  | Mushroom Kingdom | Green          |
+|            3 | Peach  | Mushroom Kingdom | Pink           |
+|            5 | Bowser | Mushroom Kingdom | Green          |
+|            7 | Yoshi  | Dinosaur Land    | Green          |
+|            6 | Daisy  | Sarasaland       | Orange         |
+|            1 | Toad   | Mushroom Kingdom | Red            |
+|            4 | Toad   | Mushroom Kingdom | Red            |
++--------------+--------+------------------+----------------+
+(7 rows)
+
+
+mario_database=> 
+
+
+Using favorite_color='Red' was not a good idea. Mario's name changed to Toad because he likes red, and now there's two rows that are the same. Well, almost. Only the character_id is different. You will have to use that to change it back to Mario. Use UPDATE to set the name to Mario for the row with the lowest character_id.
+
+mario_database=> UPDATE characters SET name='Mario' WHERE character_id=1;
+mario_database=> UPDATE 1
+
+
+Take a look at all the data in your table again to see if Mario's name got changed back.
+
+mario_database=> SELECT * FROM characters;
+                               
++--------------+--------+------------------+----------------+
+| character_id |  name  |     homeland     | favorite_color |
++--------------+--------+------------------+----------------+
+|            2 | Luigi  | Mushroom Kingdom | Green          |
+|            3 | Peach  | Mushroom Kingdom | Pink           |
+|            5 | Bowser | Mushroom Kingdom | Green          |
+|            7 | Yoshi  | Dinosaur Land    | Green          |
+|            6 | Daisy  | Sarasaland       | Orange         |
+|            4 | Toad   | Mushroom Kingdom | Red            |
+|            1 | Mario  | Mushroom Kingdom | Red            |
++--------------+--------+------------------+----------------+
+(7 rows)
+
+mario_database=> 
+
+Looks like it worked. Toad's favorite color is wrong. He likes blue. Change Toad's favorite color to Blue. Use whatever condition you want, but don't change any of the other rows.
+
+
+mario_database=> UPDATE characters SET favorite_color='Blue' WHERE name='Toad';
+mario_database=> UPDATE 1
+
+mario_database=> 
+
+Bowser's favorite_color is wrong. He likes Yellow. Why don't you update it without changing any of the other rows?
+
+mario_database=> UPDATE characters SET homeland='Koopa Kingdom' WHERE name='Bowser';
+mario_database=> UPDATE 1
+
+mario_database=> 
+
+Take a look at all the data in your table again to make sure there's no more issues.
+
+mario_database=> SELECT * FROM characters;
+mario_database=>                                
++--------------+--------+------------------+----------------+
+| character_id |  name  |     homeland     | favorite_color |
++--------------+--------+------------------+----------------+
+|            2 | Luigi  | Mushroom Kingdom | Green          |
+|            3 | Peach  | Mushroom Kingdom | Pink           |
+|            7 | Yoshi  | Dinosaur Land    | Green          |
+|            6 | Daisy  | Sarasaland       | Orange         |
+|            1 | Mario  | Mushroom Kingdom | Red            |
+|            4 | Toad   | Mushroom Kingdom | Blue           |
+|            5 | Bowser | Koopa Kingdom    | Yellow         |
++--------------+--------+------------------+----------------+
+(7 rows)
+
+
+Actually, you should put that in order. Here's an example:
+
+SELECT columns FROM table_name ORDER BY column_name;
+View all the data again, but put it in order by character_id.
+
+
+
+
+mario_database=> 
+mario_database=> SELECT columns FROM characters ORDER BY character_id;
+ERROR:  column "columns" does not exist
+LINE 1: SELECT columns FROM characters ORDER BY character_id;
+               ^
+mario_database=> SELECT * FROM characters ORDER BY character_id;
+mario_database=>                                
++--------------+--------+------------------+----------------+
+| character_id |  name  |     homeland     | favorite_color |
++--------------+--------+------------------+----------------+
+|            1 | Mario  | Mushroom Kingdom | Red            |
+|            2 | Luigi  | Mushroom Kingdom | Green          |
+|            3 | Peach  | Mushroom Kingdom | Pink           |
+|            4 | Toad   | Mushroom Kingdom | Blue           |
+|            5 | Bowser | Koopa Kingdom    | Yellow         |
+|            6 | Daisy  | Sarasaland       | Orange         |
+|            7 | Yoshi  | Dinosaur Land    | Green          |
++--------------+--------+------------------+----------------+
+(7 rows)
+
+
+mario_database=> 
+
+It looks good. Next, you are going to add a primary key. It's a column that uniquely identifies each row in the table. Here's an example of how to set a PRIMARY KEY:
+
+ALTER TABLE table_name ADD PRIMARY KEY(column_name);
+The name column is pretty unique, why don't you set that as the primary key for this table.
+
+
+mario_database=> ALTER TABLE characters ADD PRIMARY KEY(name);
+ALTER TABLE
+mario_database=> 
+
+
+You should set a primary key on every table and there can only be one per table. Take a look at the details of your characters table to see the primary key at the bottom.
+
+mario_database=> \d characters
+mario_database=>                                              Table "public.characters"
++----------------+-----------------------+-----------+----------+--------------------------------------------------+
+|     Column     |         Type          | Collation | Nullable |                     Default                      |
++----------------+-----------------------+-----------+----------+--------------------------------------------------+
+| character_id   | integer               |           | not null | nextval('characters_character_id_seq'::regclass) |
+| name           | character varying(30) |           | not null |                                                  |
+| homeland       | character varying(60) |           |          |                                                  |
+| favorite_color | character varying(30) |           |          |                                                  |
++----------------+-----------------------+-----------+----------+--------------------------------------------------+
+Indexes:
+    "characters_pkey" PRIMARY KEY, btree (name)
+
+
+mario_database=> 
+
+
+You can see the key for your name column at the bottom. It would have been better to use character_id for the primary key. Here's an example of how to drop a constraint:
+
+ALTER TABLE table_name DROP CONSTRAINT constraint_name;
+Drop the primary key on the name column. You can see the constraint name is characters_pkey.
+
+mario_database=> ALTER TABLE characters DROP CONSTRAINT characters_pkey;
+mario_database=> ALTER TABLE
+
+mario_database=> 
+
+
+View the details of the characters table to make sure it's gone.
+
+mario_database=> SELECT * FROM characters;
+                               
++--------------+--------+------------------+----------------+
+| character_id |  name  |     homeland     | favorite_color |
++--------------+--------+------------------+----------------+
+|            2 | Luigi  | Mushroom Kingdom | Green          |
+|            3 | Peach  | Mushroom Kingdom | Pink           |
+|            7 | Yoshi  | Dinosaur Land    | Green          |
+|            6 | Daisy  | Sarasaland       | Orange         |
+|            1 | Mario  | Mushroom Kingdom | Red            |
+|            4 | Toad   | Mushroom Kingdom | Blue           |
+|            5 | Bowser | Koopa Kingdom    | Yellow         |
++--------------+--------+------------------+----------------+
+(7 rows)
+
+mario_database=> 
+
+
+It's gone. Set the primary key again, but use the character_id column this time.
+
+mario_database=> ALTER TABLE characters ADD PRIMARY KEY(character_id);
+ALTER TABLE
+mario_database=> 
+
+View the details of the characters table to see the new primary key.
+
+mario_database=> \d characters
+mario_database=>                                              Table "public.characters"
++----------------+-----------------------+-----------+----------+--------------------------------------------------+
+|     Column     |         Type          | Collation | Nullable |                     Default                      |
++----------------+-----------------------+-----------+----------+--------------------------------------------------+
+| character_id   | integer               |           | not null | nextval('characters_character_id_seq'::regclass) |
+| name           | character varying(30) |           | not null |                                                  |
+| homeland       | character varying(60) |           |          |                                                  |
+| favorite_color | character varying(30) |           |          |                                                  |
++----------------+-----------------------+-----------+----------+--------------------------------------------------+
+Indexes:
+    "characters_pkey" PRIMARY KEY, btree (character_id)
+
+
+mario_database=> 
+
+That's better. The table looks complete for now. Next, create a new table named more_info for some extra info about the characters.
+
+mario_database=> CREATE TABLE more_info();
+mario_database=> CREATE TABLE
+
+mario_database=> 
+
+
+View the tables in mario_database again with the display command. You should have two tables now.
+
+mario_database=> \d
+mario_database=>                         List of relations
++--------+-----------------------------+----------+--------------+
+| Schema |            Name             |   Type   |    Owner     |
++--------+-----------------------------+----------+--------------+
+| public | characters                  | table    | freecodecamp |
+| public | characters_character_id_seq | sequence | freecodecamp |
+| public | more_info                   | table    | freecodecamp |
++--------+-----------------------------+----------+--------------+
+(3 rows)
+
+
+I wonder what that third one is. It says characters_character_id_seq. I think I have a clue. View the details of the characters table.
+
+mario_database=> \d characters
+mario_database=>                                              Table "public.characters"
++----------------+-----------------------+-----------+----------+--------------------------------------------------+
+|     Column     |         Type          | Collation | Nullable |                     Default                      |
++----------------+-----------------------+-----------+----------+--------------------------------------------------+
+| character_id   | integer               |           | not null | nextval('characters_character_id_seq'::regclass) |
+| name           | character varying(30) |           | not null |                                                  |
+| homeland       | character varying(60) |           |          |                                                  |
+| favorite_color | character varying(30) |           |          |                                                  |
++----------------+-----------------------+-----------+----------+--------------------------------------------------+
+Indexes:
+    "characters_pkey" PRIMARY KEY, btree (character_id)
+
+
+mario_database=> 
+
+
+That is what finds the next value for the character_id column. Add a column to your new table named more_info_id. Make it a type of SERIAL.
+
+
+mario_database=> ALTER TABLE more_info ADD COLUMN more_info_id SERIAL;
+mario_database=> ALTER TABLE
+
+mario_database=> 
+
+Set your new column as the primary key for this table
+mario_database=> ALTER TABLE more_info ADD PRIMARY KEY(more_info_id);
+mario_database=> ALTER TABLE
+
+mario_database=>
+
+
+View the tables in mario_database again with the display command. There should be another sequence there for the more_info_id because it also automatically increments.
+
+
+mario_database=> \d
+mario_database=>                         List of relations
++--------+-----------------------------+----------+--------------+
+| Schema |            Name             |   Type   |    Owner     |
++--------+-----------------------------+----------+--------------+
+| public | characters                  | table    | freecodecamp |
+| public | characters_character_id_seq | sequence | freecodecamp |
+| public | more_info                   | table    | freecodecamp |
+| public | more_info_more_info_id_seq  | sequence | freecodecamp |
++--------+-----------------------------+----------+--------------+
+(4 rows)
+
+
+mario_database=> 
+
+There it is. Add another column to more_info named birthday. Give it a data type of DATE.
+
+mario_database=> ALTER TABLE more_info ADD column birthday DATE;
+mario_database=> ALTER TABLE
+
+mario_database=> 
+
+
+Add a height column to more_info that's a type of INT.
+
+mario_database=> ALTER TABLE more_info ADD COLUMN height INT;
+mario_database=> ALTER TABLE
+
+mario_database=> 
+
+Add a weight column. Give it a type of NUMERIC(4, 1). That data type is for decimals. NUMERIC(4, 1) has up to four digits and one of them has to be to the right of the decimal.
+
+mario_database=> ALTER TABLE more_info ADD COLUMN weight NUMERIC(4, 1);
+ALTER TABLE
+mario_database=> 
+
+
+
+Take a look at the details of more_info to see all your columns.
+
+mario_database=> \d more_info
+mario_database=>                                         Table "public.more_info"
++--------------+--------------+-----------+----------+-------------------------------------------------+
+|    Column    |     Type     | Collation | Nullable |                     Default                     |
++--------------+--------------+-----------+----------+-------------------------------------------------+
+| more_info_id | integer      |           | not null | nextval('more_info_more_info_id_seq'::regclass) |
+| birthday     | date         |           |          |                                                 |
+| height       | integer      |           |          |                                                 |
+| weight       | numeric(4,1) |           |          |                                                 |
++--------------+--------------+-----------+----------+-------------------------------------------------+
+Indexes:
+    "more_info_pkey" PRIMARY KEY, btree (more_info_id)
+
+
+mario_database=> 
+
+
+There’s your four columns and the primary key you created at the bottom. To know what row is for a character, you need to set a foreign key so you can relate rows from this table to rows from your characters table. Here's an example that creates a column as a foreign key:
+
+ALTER TABLE table_name ADD COLUMN column_name DATATYPE REFERENCES referenced_table_name(referenced_column_name);
+That's quite the command. In the more_info table, create a character_id column. Make it an INT and a foreign key that references the character_id column from the characters table. Good luck.
+
+mario_database=> ALTER TABLE more_info ADD COLUMN character_id INT REFERENCES characters(character_id);
+mario_database=> ALTER TABLE
+
+mario_database=> 
+
+
+To set a row in more_info for Mario, you just need to set the character_id (foreign key) value to whatever it is in the characters table. Take a look at the details of more_info to see your foreign key.
+
+mario_database=> \d more_info
+mario_database=>                                         Table "public.more_info"
++--------------+--------------+-----------+----------+-------------------------------------------------+
+|    Column    |     Type     | Collation | Nullable |                     Default                     |
++--------------+--------------+-----------+----------+-------------------------------------------------+
+| more_info_id | integer      |           | not null | nextval('more_info_more_info_id_seq'::regclass) |
+| birthday     | date         |           |          |                                                 |
+| height       | integer      |           |          |                                                 |
+| weight       | numeric(4,1) |           |          |                                                 |
+| character_id | integer      |           |          |                                                 |
++--------------+--------------+-----------+----------+-------------------------------------------------+
+Indexes:
+    "more_info_pkey" PRIMARY KEY, btree (more_info_id)
+Foreign-key constraints:
+    "more_info_character_id_fkey" FOREIGN KEY (character_id) REFERENCES characters(character_id)
+
+
+mario_database=> 
+
+
+There's your foreign key at the bottom. These tables have a "one-to-one" relationship. One row in the characters table will be related to exactly one row in more_info and vice versa. Enforce that by adding the UNIQUE constraint to your foreign key. Here's an example:
+
+ALTER TABLE table_name ADD UNIQUE(column_name);
+Add the UNIQUE constraint to the column you just added.
+
+mario_database=> ALTER TABLE more_info ADD UNIQUE(more_info_id);
+mario_database=> ALTER TABLE
+
+mario_database=> 
+
+
+
+
+
+
 
 
 -------
