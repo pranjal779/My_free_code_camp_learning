@@ -1230,9 +1230,145 @@ mario_database=> ALTER TABLE
 
 mario_database=> 
 
+The column should also be NOT NULL since you don't want to have a row that is for nobody. Here's an example:
+
+ALTER TABLE table_name ALTER COLUMN column_name SET NOT NULL;
+Add the NOT NULL constraint to your foreign key column.
+
+mario_database=> ALTER TABLE more_info ALTER COLUMN character_id SET NOT NULL;
+ALTER TABLE
 
 
 
+Take a look at the details of your more_info table to see all the keys and constraints you added.
+
+mario_database=> \d more_info
+mario_database=>                                         Table "public.more_info"
++--------------+--------------+-----------+----------+-------------------------------------------------+
+|    Column    |     Type     | Collation | Nullable |                     Default                     |
++--------------+--------------+-----------+----------+-------------------------------------------------+
+| more_info_id | integer      |           | not null | nextval('more_info_more_info_id_seq'::regclass) |
+| birthday     | date         |           |          |                                                 |
+| height       | integer      |           |          |                                                 |
+| weight       | numeric(4,1) |           |          |                                                 |
+| character_id | integer      |           | not null |                                                 |
++--------------+--------------+-----------+----------+-------------------------------------------------+
+Indexes:
+    "more_info_pkey" PRIMARY KEY, btree (more_info_id)
+    "more_info_character_id_key" UNIQUE CONSTRAINT, btree (character_id)
+Foreign-key constraints:
+    "more_info_character_id_fkey" FOREIGN KEY (character_id) REFERENCES characters(character_id)
+
+
+
+The structure is set, now you can add some rows. First, you need to know what character_id you need for the foreign key column. You have viewed all columns in a table with *. You can pick columns by putting in the column name instead of *. Use SELECT to view the character_id column from the characters table.
+
+mario_database=> SELECT character_id FROM characters;
+mario_database=>         
++--------------+
+| character_id |
++--------------+
+|            1 |
+|            2 |
+|            3 |
+|            7 |
+|            6 |
+|            4 |
+|            5 |
++--------------+
+(7 rows)
+
+
+mario_database=> 
+
+That list of numbers doesn't really help. Use SELECT again to display both the character_id and name columns from the characters table. You can separate the column names with a comma to view both.
+
+
+
+mario_database=> SELECT character_id, name FROM characters;
+mario_database=>              
++--------------+--------+
+| character_id |  name  |
++--------------+--------+
+|            1 | Mario  |
+|            2 | Luigi  |
+|            3 | Peach  |
+|            7 | Yoshi  |
+|            6 | Daisy  |
+|            4 | Toad   |
+|            5 | Bowser |
++--------------+--------+
+(7 rows)
+
+
+mario_database=> 
+
+That's better. You can see Mario's id there. Here's some more info for him:
+
+birthday	height	weight
+1981-07-09	155	64.5
+Add a row to more_info with the above data for Mario using the INSERT INTO and VALUES keywords. Be sure to set his character_id when adding him. Also, DATE values need a string with the format: 'YYYY-MM-DD'.
+
+mario_database=> \d more_info
+mario_database=>                                         Table "public.more_info"
++--------------+--------------+-----------+----------+-------------------------------------------------+
+|    Column    |     Type     | Collation | Nullable |                     Default                     |
++--------------+--------------+-----------+----------+-------------------------------------------------+
+| more_info_id | integer      |           | not null | nextval('more_info_more_info_id_seq'::regclass) |
+| birthday     | date         |           |          |                                                 |
+| height       | integer      |           |          |                                                 |
+| weight       | numeric(4,1) |           |          |                                                 |
+| character_id | integer      |           | not null |                                                 |
++--------------+--------------+-----------+----------+-------------------------------------------------+
+Indexes:
+    "more_info_pkey" PRIMARY KEY, btree (more_info_id)
+    "more_info_character_id_key" UNIQUE CONSTRAINT, btree (character_id)
+Foreign-key constraints:
+    "more_info_character_id_fkey" FOREIGN KEY (character_id) REFERENCES characters(character_id)
+
+
+mario_database=> INSERT INTO more_info(birthday, height, weight, character_id) VALUES('1981-07-09', 155, 64.5, 1);
+mario_database=> INSERT 0 1
+
+View all the data in more_info to make sure it's looking good.
+
+mario_database=> SELECT * FROM more_info;
+mario_database=>                                
++--------------+------------+--------+--------+--------------+
+| more_info_id |  birthday  | height | weight | character_id |
++--------------+------------+--------+--------+--------------+
+|            1 | 1981-07-09 |    155 |   64.5 |            1 |
++--------------+------------+--------+--------+--------------+
+(1 row)
+
+
+mario_database=> 
+
+
+Next, you are going to add some info for Luigi. Use SELECT again to view the character_id and name columns from the characters table to find his id.
+
+mario_database=> SELECT character_id, name FROM characters;
+             
++--------------+--------+
+| character_id |  name  |
++--------------+--------+
+|            1 | Mario  |
+|            2 | Luigi  |
+|            3 | Peach  |
+|            7 | Yoshi  |
+|            6 | Daisy  |
+|            4 | Toad   |
+|            5 | Bowser |
++--------------+--------+
+(7 rows)
+
+mario_database=> 
+
+You can see Luigi's id there. Here's his info:
+
+birthday	height	weight
+1983-07-14	175	48.8
+Add a row in more_info for Luigi using the above info. Be sure to add his character_id as well.
 
 
 
