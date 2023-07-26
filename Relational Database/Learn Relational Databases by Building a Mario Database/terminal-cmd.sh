@@ -1120,11 +1120,23 @@ mario_database=> ALTER TABLE
 
 mario_database=> 
 
-Set your new column as the primary key for this table
-mario_database=> ALTER TABLE more_info ADD PRIMARY KEY(more_info_id);
-mario_database=> ALTER TABLE
+That is what finds the next value for the character_id column. Add a column to your new table named more_info_id. Make it a type of SERIAL.
 
-mario_database=>
+Set your new column as the primary key for this table.
+
+mario_database=> ALTER TABLE more_info ADD PRIMARY KEY(more_info_id);
+ALTER TABLE
+mario_database=> \d more_info
+                                     Table "public.more_info"
++--------------+---------+-----------+----------+-------------------------------------------------+
+|    Column    |  Type   | Collation | Nullable |                     Default                     |
++--------------+---------+-----------+----------+-------------------------------------------------+
+| more_info_id | integer |           | not null | nextval('more_info_more_info_id_seq'::regclass) |
++--------------+---------+-----------+----------+-------------------------------------------------+
+Indexes:
+    "more_info_pkey" PRIMARY KEY, btree (more_info_id)
+
+mario_database=> 
 
 
 View the tables in mario_database again with the display command. There should be another sequence there for the more_info_id because it also automatically increments.
@@ -1369,6 +1381,73 @@ You can see Luigi's id there. Here's his info:
 birthday	height	weight
 1983-07-14	175	48.8
 Add a row in more_info for Luigi using the above info. Be sure to add his character_id as well.
+
+
+**as of 7/22/23**
+
+mario_database=> INSERT INTO more_info(birthday, height, weight, character_id) VALUES('1981-07-09', 155, 64.5),
+mario_database-> ('1983-07-14', 175, 48.5);
+ERROR:  INSERT has more target columns than expressions
+LINE 1: INSERT INTO more_info(birthday, height, weight, character_id...
+                                                        ^
+mario_database=> INSERT INTO more_info(birthday, height, weight, character_id) VALUES('1981-07-09', 155, 64.5);
+ERROR:  INSERT has more target columns than expressions
+LINE 1: INSERT INTO more_info(birthday, height, weight, character_id...
+                                                        ^
+mario_database=> INSERT INTO more_info(birthday, height, weight, character_id) VALUES('1981-07-09', 155, 64.5, 1),
+('1983-07-14', 175, 48.5, 2);
+INSERT 0 2
+mario_database=> SELECT * FROM more_info;
+                               
++--------------+------------+--------+--------+--------------+
+| more_info_id |  birthday  | height | weight | character_id |
++--------------+------------+--------+--------+--------------+
+|            1 | 1981-07-09 |    155 |   64.5 |            1 |
+|            2 | 1983-07-14 |    175 |   48.5 |            2 |
++--------------+------------+--------+--------+--------------+
+(2 rows)
+
+mario_database=> 
+
+
+
+Peach is next. View the character_id and name columns from the characters table again so you can find her id.
+
+1. Use the SELECT and FROM keywords
+
+2. Here's an example: SELECT column1, column2 FROM table_name;
+
+3. Try entering SELECT character_id, name FROM characters;
+
+4. Enter psql --username=freecodecamp --dbname=mario_database into the terminal to log in if you aren't already
+
+mario_database=> select * from characters ORDER BY character_id;
+mario_database=>                                
++--------------+--------+------------------+----------------+
+| character_id |  name  |     homeland     | favorite_color |
++--------------+--------+------------------+----------------+
+|            1 | Mario  | Mushroom Kingdom | Red            |
+|            2 | Luigi  | Mushroom Kingdom | Green          |
+|            3 | Peach  | Mushroom Kingdom | Pink           |
+|            4 | Toad   | Mushroom Kingdom | Blue           |
+|            5 | Bowser | Koopa Kingdom    | Yellow         |
+|            6 | Daisy  | Sarasaland       | Orange         |
+|            7 | Yoshi  | Dinosaur Land    | Green          |
++--------------+--------+------------------+----------------+
+(7 rows)
+
+
+mario_database=> 
+
+
+
+
+
+
+
+
+
+
 
 
 
