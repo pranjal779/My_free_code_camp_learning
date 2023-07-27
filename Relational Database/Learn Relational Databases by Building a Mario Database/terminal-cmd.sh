@@ -32,10 +32,39 @@ Use the list shortcut command again to make sure your new database is there.
 
 postgres=> \l
 
+postgres=>                                    List of databases
++----------------+--------------+----------+---------+---------+-----------------------+
+|      Name      |    Owner     | Encoding | Collate |  Ctype  |   Access privileges   |
++----------------+--------------+----------+---------+---------+-----------------------+
+| first_database | freecodecamp | UTF8     | C.UTF-8 | C.UTF-8 |                       |
+| postgres       | postgres     | UTF8     | C.UTF-8 | C.UTF-8 |                       |
+| template0      | postgres     | UTF8     | C.UTF-8 | C.UTF-8 | =c/postgres          +|
+|                |              |          |         |         | postgres=CTc/postgres |
+| template1      | postgres     | UTF8     | C.UTF-8 | C.UTF-8 | =c/postgres          +|
+|                |              |          |         |         | postgres=CTc/postgres |
++----------------+--------------+----------+---------+---------+-----------------------+
+(4 rows)
+
+
 
 It worked. Your new database is there. If you don't get a message after entering a command, it means it's incomplete and you likely forgot the semi-colon. You can just add it on the next line and press enter to finish the command. Create another database named second_database.
 
 postgres=> CREATE DATABASE second_database;
+
+postgres=> \l
+postgres=>                                     List of databases
++-----------------+--------------+----------+---------+---------+-----------------------+
+|      Name       |    Owner     | Encoding | Collate |  Ctype  |   Access privileges   |
++-----------------+--------------+----------+---------+---------+-----------------------+
+| first_database  | freecodecamp | UTF8     | C.UTF-8 | C.UTF-8 |                       |
+| postgres        | postgres     | UTF8     | C.UTF-8 | C.UTF-8 |                       |
+| second_database | freecodecamp | UTF8     | C.UTF-8 | C.UTF-8 |                       |
+| template0       | postgres     | UTF8     | C.UTF-8 | C.UTF-8 | =c/postgres          +|
+|                 |              |          |         |         | postgres=CTc/postgres |
+| template1       | postgres     | UTF8     | C.UTF-8 | C.UTF-8 | =c/postgres          +|
+|                 |              |          |         |         | postgres=CTc/postgres |
++-----------------+--------------+----------+---------+---------+-----------------------+
+(5 rows)
 
 
 You can connect to a database by entering \c database_name. You need to connect to add information. Connect to your second_database.
@@ -60,6 +89,14 @@ second_database=>
 
 View the tables in second_database again with the display command. You should see your new table there with a little meta data about it.
 second_database=> \d
+second_database=>                List of relations
++--------+-------------+-------+--------------+
+| Schema |    Name     | Type  |    Owner     |
++--------+-------------+-------+--------------+
+| public | first_table | table | freecodecamp |
++--------+-------------+-------+--------------+
+(1 row)
+
 
 Create another new table in this database. Give it a name of second_table.
 second_database=> CREATE TABLE second_table();
@@ -73,6 +110,14 @@ There should be two tables in this database now. Display them again to make sure
 
 second_database=> \d
 second_database=> 
+               List of relations
++--------+--------------+-------+--------------+
+| Schema |     Name     | Type  |    Owner     |
++--------+--------------+-------+--------------+
+| public | first_table  | table | freecodecamp |
+| public | second_table | table | freecodecamp |
++--------+--------------+-------+--------------+
+(2 rows)
 
 
 You can view more details about a table by adding the table name after the display command like this: \d table_name. View more details about your second_table.
@@ -120,7 +165,7 @@ second_database=>            Table "public.second_table"
 Tables need columns to describe the data in them, yours doesn't have any yet. Here's an example of how to add one:
 
 ALTER TABLE table_name ADD COLUMN column_name DATATYPE;
-Add a column to second_table named first_column. Give it a data type of INT. INT stands for integer. Don't forget the semi-colon. ??
+Add a column to second_table named first_column. Give it a data type of INT. INT stands for integer. Don't forget the semi-colon. 😄
 
 second_database=> ALTER TABLE second_table  ADD COLUMN first_column INT;
 second_database=> ALTER TABLE
@@ -140,7 +185,7 @@ second_database=>                 Table "public.second_table"
 +--------------+---------+-----------+----------+---------+
 
 
-Your column is there ?? Use ALTER TABLE and ADD COLUMN to add another column to second_table named id that's a type of INT.
+Your column is there 😄 Use ALTER TABLE and ADD COLUMN to add another column to second_table named id that's a type of INT.
 
 second_database=> ALTER TABLE second_table ADD COLUMN id INT;
 second_database=> ALTER TABLE
