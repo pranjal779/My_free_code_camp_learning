@@ -13,6 +13,8 @@ and refer bookmarks
 
 <h2><a href="https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/">**JavaScript Algorithm and Data Structures.**</a></h2>
 
+<h2><a href="https://www.freecodecamp.org/learn/scientific-computing-with-python/">**Scientific Computing with Python**</a></h2>
+
 
 replit badge:
 <br>
