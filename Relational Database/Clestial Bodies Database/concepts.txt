@@ -1,0 +1,31 @@
+when I add a foreign key which references to any of the columns in any of the table
+can it be a SERIAL or AUTO Incrementing column is that possible?
+
+Yes, it is absolutely possible to use a `SERIAL` or auto-incrementing column as a foreign key in PostgreSQL.
+
+The `SERIAL` data type in PostgreSQL is a shorthand for creating an auto-incrementing integer column. When you define a column as `SERIAL`, PostgreSQL automatically generates a sequence and associates it with the column. Whenever you insert a new row into the table and do not provide a value for the `SERIAL` column, PostgreSQL will automatically assign a unique integer value from the associated sequence.
+
+Since the `SERIAL` column generates unique integer values, it can serve as a suitable candidate for a foreign key column. When using a `SERIAL` column as a foreign key, it ensures that each foreign key value in the referencing table points to a valid and unique primary key value in the referenced table.
+
+Here's an example of using a `SERIAL` column as a foreign key:
+
+Let's assume you have two tables, `galaxy` and `star`, with the following structures:
+
+```sql
+CREATE TABLE galaxy (
+    galaxy_id SERIAL PRIMARY KEY,
+    name VARCHAR(100) NOT NULL
+);
+
+CREATE TABLE star (
+    star_id SERIAL PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    galaxy_id INT REFERENCES galaxy(galaxy_id)
+);
+```
+
+In this example, the `galaxy_id` column in the `galaxy` table is defined as a `SERIAL` data type and serves as the primary key. The `galaxy_id` column in the `star` table is a foreign key that references the `galaxy_id` column in the `galaxy` table.
+
+When you insert a new row into the `star` table without explicitly providing a value for the `galaxy_id` column, PostgreSQL will automatically generate a unique value from the `galaxy_id` sequence, ensuring the foreign key points to a valid and unique primary key in the `galaxy` table.
+
+So, yes, you can use `SERIAL` or auto-incrementing columns as foreign keys in PostgreSQL, and it is a common practice for establishing relationships between tables in a database.

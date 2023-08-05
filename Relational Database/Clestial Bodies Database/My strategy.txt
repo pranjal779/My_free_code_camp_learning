@@ -1,0 +1,54 @@
+
+Sure, here are some suggestions for the columns in each table based on the requirements you provided:
+
+Table: galaxy
+
+galaxy_id (Primary Key, INT, Auto-increment)
+name (VARCHAR, UNIQUE, NOT NULL)
+description (TEXT)
+size (NUMERIC)
+distance_from_earth (NUMERIC)
+is_active (BOOLEAN)
+Table: star
+
+star_id (Primary Key, INT, Auto-increment)
+name (VARCHAR, UNIQUE, NOT NULL)
+spectral_type (VARCHAR)
+luminosity (NUMERIC)
+temperature (NUMERIC)
+mass (NUMERIC)
+distance_from_earth (NUMERIC)
+is_active (BOOLEAN)
+galaxy_id (Foreign Key referencing galaxy)
+Table: planet
+
+planet_id (Primary Key, INT, Auto-increment)
+name (VARCHAR, UNIQUE, NOT NULL)
+type (VARCHAR)
+size (NUMERIC)
+mass (NUMERIC)
+distance_from_star (NUMERIC)
+orbital_period (NUMERIC)
+is_habitable (BOOLEAN)
+star_id (Foreign Key referencing star)
+Table: moon
+
+moon_id (Primary Key, INT, Auto-increment)
+name (VARCHAR, UNIQUE, NOT NULL)
+size (NUMERIC)
+mass (NUMERIC)
+distance_from_planet (NUMERIC)
+orbital_period (NUMERIC)
+is_satellite (BOOLEAN)
+planet_id (Foreign Key referencing planet)
+Table: celestial_body
+
+body_id (Primary Key, INT, Auto-increment)
+name (VARCHAR, UNIQUE, NOT NULL)
+type (VARCHAR)
+size (NUMERIC)
+mass (NUMERIC)
+is_active (BOOLEAN)
+In this design, each table has a primary key column following the naming convention (e.g., galaxy_id, star_id, planet_id, moon_id, body_id). The name column in each table is of type VARCHAR and is set to be unique and not nullable.
+
+Additionally, the star table has a foreign key column galaxy_id that references the galaxy table's primary key (galaxy_id). The planet table has a foreign key column star_id that references the star table's primary key (star_id), and the moon table has a foreign key column planet_id that references the planet table's primary key (planet_id).
