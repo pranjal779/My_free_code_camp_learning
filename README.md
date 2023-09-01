@@ -11,6 +11,8 @@ and refer bookmarks
 
 ## [Scientific Computing with Python by Dr. Charles Severance](https://www.freecodecamp.org/learn/scientific-computing-with-python/)
 
+## [Free Foundational C# Certification from Microsoft – Full Course by FreeCodeCamp x @GavinLon](https://www.youtube.com/watch?v=6GQAE7iLOhY&ab_channel=freeCodeCamp.org)
+
 
 replit badge:
 <br>
