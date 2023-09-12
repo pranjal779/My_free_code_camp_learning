@@ -1,0 +1,33 @@
+Running C# code locally in Visual Studio Code (VS Code) and other code editors is relatively straightforward. Here are the general steps for running C# code locally:
+
+**Prerequisites:**
+1. **Install .NET SDK:** Before running C# code, you need to install the .NET SDK (Software Development Kit) on your computer. You can download it from the official .NET website: [Download .NET SDK](https://dotnet.microsoft.com/download/dotnet).
+
+**Running C# Code in Visual Studio Code (VS Code):**
+1. **Install Visual Studio Code:** If you haven't already, install VS Code from the official website: [Download Visual Studio Code](https://code.visualstudio.com/download).
+
+2. **Install C# Extension:** Open VS Code, go to the Extensions view by clicking the square icon on the sidebar, search for "C#" in the extensions marketplace, and install the official C# extension provided by Microsoft.
+
+3. **Create a C# Project:** In VS Code, you can create a new C# project using the command-line or use a template. Open the integrated terminal in VS Code, navigate to your desired project folder, and use the `dotnet new console` command to create a new console application, for example.
+
+4. **Write Your Code:** Write your C# code in the `.cs` files created in your project folder.
+
+5. **Run Your Code:** You can build and run your C# application from the integrated terminal. Use the `dotnet build` command to build your project, and then use the `dotnet run` command to execute your application. Make sure your terminal is in the project folder when you run these commands.
+
+**Running C# Code in Other Editors (e.g., Vim, Sublime Text):**
+1. **Install .NET SDK:** As mentioned earlier, you need to install the .NET SDK on your computer.
+
+2. **Write C# Code:** Use your preferred text editor (e.g., Vim, Sublime Text) to write your C# code in a `.cs` file.
+
+3. **Save the File:** Save your C# code file with a `.cs` extension.
+
+4. **Compile and Run:** Open a terminal or command prompt, navigate to the folder containing your `.cs` file, and use the `csc` command (the C# compiler) to compile your code. For example, you can use `csc YourProgram.cs` to compile `YourProgram.cs`. After compilation, you can execute the generated `.exe` file with the same name as your source file, like `YourProgram.exe`.
+
+**Connecting .NET and C#:**
+- .NET is a software development platform created by Microsoft. It provides a runtime environment called the Common Language Runtime (CLR), which executes code written in various languages, including C#. C# is one of the primary languages used for .NET development.
+
+- When you write C# code, you're using the C# language to create applications that run on the .NET framework. The .NET framework provides libraries, tools, and runtime support for C# and other languages.
+
+- The .NET SDK includes the C# compiler (csc) and other tools necessary for building, running, and managing .NET applications. When you compile a C# program, it produces Intermediate Language (IL) code that is executed by the CLR at runtime.
+
+In summary, .NET is the overarching platform that provides the runtime and libraries for executing C# code. You use the .NET SDK to develop, build, and run C# applications on your local machine. Different code editors, including VS Code, support C# development by integrating with the .NET SDK and tools.
