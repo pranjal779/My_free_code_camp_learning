@@ -1,6 +1,7 @@
 // Setup
 function compareEquality(a, b) {
-  if (a === typeof(b)) { // Change this line
+  if (a === b) { // Change this line // strict equality was task specific
+  // if (a === typeof(b)) { // Change this line
     return "Equal";
   }
   return "Not Equal";
