@@ -1,3 +1,4 @@
+
 Exercise - Print literal values
 Completed
 100 XP
