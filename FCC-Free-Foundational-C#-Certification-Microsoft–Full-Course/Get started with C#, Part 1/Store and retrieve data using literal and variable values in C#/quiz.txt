@@ -1,0 +1,32 @@
+Knowledge check
+
+Check your knowledge
+
+1. Which of the following variable names should or must be avoided? 
+
+$DATA
+
+registrationComplete
+
+flag
+2. What is the problem with this line of code: var message; 
+
+var isn't a data type.
+
+Use of var keyword without initializing the variable
+
+A variable named message should always be a string.
+3. Which of the following is the output of Console.WriteLine(34.40M);? 
+
+34.40M
+
+34.4
+
+34.40
+4. Which of the following lines of code creates a variable correctly? 
+
+int x = 12.3m;
+
+decimal x = 12.3m;
+
+bool x = 'False';
