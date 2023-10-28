@@ -30,4 +30,12 @@ Modify the function abTest so that if a or b are less than 0 the function will i
 
 Hint
 Remember that undefined is a keyword, not a string.
+
+Passed:abTest(2, 2) should return a number
+Passed:abTest(2, 2) should return 8
+Passed:abTest(-2, 2) should return undefined
+Passed:abTest(2, -2) should return undefined
+Passed:abTest(2, 8) should return 18
+Passed:abTest(3, 3) should return 12
+Passed:abTest(0, 0) should return 0
 */
