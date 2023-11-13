@@ -1,0 +1,20 @@
+Console.WriteLine("Hello\nWorld!");
+Console.WriteLine("Hello\tWorld!");
+
+// error:
+// Console.WriteLine("Hello "World"!");
+
+// error output:
+/*
+(1,27): error CS1003: Syntax error, ',' expected
+(1,27): error CS0103: The name 'World' does not exist in the current context
+(1,32): error CS1003: Syntax error, ',' expected
+*/
+
+Console.WriteLine("Hello \"World\"!");
+
+// error codeLine:
+// Console.WriteLine("c:\source\repos");
+
+// to resolve usse '\\':
+Console.WriteLine("c:\\source\\repos");
