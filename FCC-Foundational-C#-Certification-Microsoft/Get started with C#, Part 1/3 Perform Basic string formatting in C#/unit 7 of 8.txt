@@ -1,0 +1,32 @@
+Knowledge check
+200 XP
+3 minutes
+
+1. Which of the following escape sequences should be used to add double quotes to a literal string in C# code? 
+
+'\q'
+
+'\''
+
+'\"'
+2. Which of the following lines of code correctly uses string interpolation assuming that the variable value is a string? 
+
+'Console.WriteLine(@"My value: {value}");'
+
+'Console.WriteLine($"My value: {value}");'
+
+'Console.WriteLine(@"My value: [value]");'
+3. Unicode characters were embedded in the C# strings for a console application to present a greeting message in Thai. However, the message is only displayed as question mark characters. What is a possible cause? 
+
+A missing \u escape sequence for Unicode characters.
+
+The wrong Unicode characters were used.
+
+The user's console doesn't support Unicode characters.
+4. Which of the following lines of code append a single \ to the string directory? 
+
+'directory = directory + "\";'
+
+'directory = directory + '\';'
+
+'directory = directory + @"\";'
