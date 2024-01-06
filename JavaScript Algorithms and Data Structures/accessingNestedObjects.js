@@ -42,9 +42,9 @@ ourStorage.cabinet["top drawer"].folder2 would be the string secrets, and ourSto
 Access the myStorage object and assign the contents of the glove box property to the gloveBoxContents variable. Use dot notation for all properties where possible, otherwise use bracket notation.
 
 Tests
-Waiting:gloveBoxContents should equal the string maps.
-Waiting:Your code should use dot notation, where possible, to access myStorage.
-Waiting:gloveBoxContents should still be declared with const.
-Waiting:You should not change the myStorage object.
+Passed:gloveBoxContents should equal the string maps.
+Passed:Your code should use dot notation, where possible, to access myStorage.
+Passed:gloveBoxContents should still be declared with const.
+Passed:You should not change the myStorage object.
 
 */
