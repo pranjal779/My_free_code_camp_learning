@@ -45,10 +45,35 @@ function updateRecords(records, id, prop, value) {
   return records;
 }
 
-/*
+
 // Example usage:
 console.log(updateRecords(recordCollection, 5439, 'artist', 'ABBA'));
 ```
-
+/*
 This should give you a starting point for implementing the logic. You can now go through the other test cases and modify the `updateRecords` function accordingly.
+*/
+
+/*
+   The `||` operator in JavaScript is called the "logical OR" operator. In the context of `album.tracks = album.tracks || [];`, 
+   it is used for a common idiom known as "defaulting" or "coalescing."
+
+Here's how it works:
+
+1. **Logical OR (`||`) Operator:**
+   - The `||` operator returns the first truthy operand or the last operand if none are truthy.
+   - If the left operand is truthy, it returns the left operand. Otherwise, it returns the right operand.
+
+2. **Defaulting or Coalescing:**
+   - The expression `album.tracks || []` checks if `album.tracks` is truthy.
+   - If `album.tracks` is truthy (i.e., it exists and is not falsy), it returns `album.tracks`.
+   - If `album.tracks` is falsy (i.e., it is `undefined`, `null`, `0`, `""`, etc.), it returns an empty array `[]`.
+
+3. **Use Case in the Code:**
+   - `album.tracks = album.tracks || [];` ensures that `album.tracks` is always an array.
+   - If `album.tracks` is already an array (truthy), it keeps its value.
+   - If `album.tracks` is not an array (falsy), it sets `album.tracks` to an empty array.
+
+This is a concise way to ensure that you are working with an array, especially when dealing with properties that might not be initialized or might have different types. 
+In this specific case, it guards against the situation where an album might not have a `tracks` property, or it might be `null` or `undefined`. 
+By using `|| []`, you make sure that `album.tracks` is always an array, and you can safely use array methods on it.
 */
