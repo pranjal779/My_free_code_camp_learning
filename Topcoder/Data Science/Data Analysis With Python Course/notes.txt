@@ -1,1 +1,5 @@
 Topcoder - Data Analysis with Python Course
+
+
+Unsure if this is module 1 but the ssome link with reources
+https://github.com/ine-rmotr-curriculum/FreeCodeCamp-Pandas-Real-Life-Example
