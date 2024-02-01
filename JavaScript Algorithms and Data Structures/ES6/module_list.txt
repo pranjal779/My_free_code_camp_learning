@@ -1,0 +1,56 @@
+Collapse courseES6
+1/29
+, 1 of 29 challenges completed
+Compare Scopes of the var and let Keywords
+Mutate an Array Declared with const
+Prevent Object Mutation
+Use Arrow Functions to Write Concise Anonymous Functions
+Write Arrow Functions with Parameters
+Not Passed
+Set Default Parameters for Your Functions
+Not Passed
+Use the Rest Parameter with Function Parameters
+Not Passed
+Use the Spread Operator to Evaluate Arrays In-Place
+Not Passed
+Use Destructuring Assignment to Extract Values from Objects
+Not Passed
+Use Destructuring Assignment to Assign Variables from Objects
+Not Passed
+Use Destructuring Assignment to Assign Variables from Nested Objects
+Not Passed
+Use Destructuring Assignment to Assign Variables from Arrays
+Not Passed
+Destructuring via rest elements
+Not Passed
+Use Destructuring Assignment to Pass an Object as a Function's Parameters
+Not Passed
+Create Strings using Template Literals
+Not Passed
+Write Concise Object Literal Declarations Using Object Property Shorthand
+Not Passed
+Write Concise Declarative Functions with ES6
+Not Passed
+Use class Syntax to Define a Constructor Function
+Not Passed
+Use getters and setters to Control Access to an Object
+Not Passed
+Create a Module Script
+Not Passed
+Use export to Share a Code Block
+Not Passed
+Reuse JavaScript Code Using import
+Not Passed
+Use * to Import Everything from a File
+Not Passed
+Create an Export Fallback with export default
+Not Passed
+Import a Default Export
+Not Passed
+Create a JavaScript Promise
+Not Passed
+Complete a Promise with resolve and reject
+Not Passed
+Handle a Fulfilled Promise with then
+Not Passed
+Handle a Rejected Promise with catch
