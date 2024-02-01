@@ -1,3 +1,31 @@
+// code:
+function checkScope() {
+  let i = 'function scope'; // testing the let scope against using var keyword
+  if (true) {
+   let i = 'block scope'; // used let here
+    console.log('Block scope i is: ', i);
+  }
+  console.log('Function scope i is: ', i);
+  return i;
+}
+
+/*
+Tests
+Passed:var should not exist in code.
+Passed:The variable i declared in the if statement should equal the string block scope.
+Passed:checkScope() should return the string function scope
+*/
+
+/*
+
+// running tests
+// tests completed
+// console output
+Block scope i is:  block scope
+Function scope i is:  function scope
+
+*/
+
 /*
 Compare Scopes of the var and let Keywords
 If you are unfamiliar with let, check out this challenge about the difference between let and var.
