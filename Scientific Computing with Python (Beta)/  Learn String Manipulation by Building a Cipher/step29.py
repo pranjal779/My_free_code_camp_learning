@@ -28,3 +28,13 @@ for char in text.lower():
 >>> d 3
 
 '''
+
+'''
+Congratulations, your code passes. Submit your code to continue.
+
+"You're a shooting star!"
+
+31% complete
+Learn String Manipulation by Building a Cipher
+31% complete
+'''
