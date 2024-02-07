@@ -1,3 +1,4 @@
+// ES6 task 1
 // code:
 function checkScope() {
   let i = 'function scope'; // testing the let scope against using var keyword
