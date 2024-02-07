@@ -15,6 +15,33 @@ for char in text.lower():
     print(new_char)
 
 '''
+>>> h 7
+>>> k
+>>> e 4
+>>> h
+>>> l 11
+>>> o
+>>> l 11
+>>> o
+>>> o 14
+>>> r
+>>>   -1
+>>> c
+>>> w 22
+>>> z
+>>> o 14
+>>> r
+>>> r 17
+>>> u
+>>> l 11
+>>> o
+>>> d 3
+>>> g
+'''
+
+
+
+'''
 Congratulations, your code passes. Submit your code to continue.
 
 "It's alive. It's alive!"
