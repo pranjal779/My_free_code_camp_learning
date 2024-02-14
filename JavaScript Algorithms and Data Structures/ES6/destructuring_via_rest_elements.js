@@ -19,6 +19,8 @@ const sourceWithoutFirstTwo = removeFirstTwo(source);
 // console.log(a, b);
 // console.log(...arr);
 
+
+// output:
 console.log(sourceWithoutFirstTwo);
 
 // Destructuring via rest elements
