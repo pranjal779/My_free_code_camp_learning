@@ -26,6 +26,12 @@ At the end of your code, call your caesar function. Pay attention to the indenta
 caesar()
 
 '''
+>>> plain text: Hello Zaira
+>>> encrypted text: khoor cdlud
+'''
+
+
+'''
 "King of the Pirates!"
 
 54% complete
