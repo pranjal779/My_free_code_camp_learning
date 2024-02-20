@@ -29,3 +29,11 @@ def caesar(message, offset):
     print('encrypted text:', encrypted_text)
 
 caesar()
+
+'''
+"You're crushing it!"
+
+55% complete
+Learn String Manipulation by Building a Cipher
+55% complete
+'''
