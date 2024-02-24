@@ -6,7 +6,7 @@ class Vegetable {
     this.name = name;
   }
   sabji() {
-    console.log(this.veggiesTyp + 'is a sweet made with delicous ' + this.name + ' cashews, Raisins or in hindi it is called किशमिश (kishamish)')
+    console.log(this.veggiesTyp + ' is a sweet made with delicous ' + this.name + ' cashews, Raisins or in hindi it is called किशमिश (kishamish)')
   }
 }
 // Only change code above this line
