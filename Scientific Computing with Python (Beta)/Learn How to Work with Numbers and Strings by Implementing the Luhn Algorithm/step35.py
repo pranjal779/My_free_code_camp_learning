@@ -34,6 +34,9 @@ def main():
 
 main()
 
+# Output:
+# >>> VALID!
+
 # Congratulations, your code passes. Submit your code to continue.
 
 # "Keep calm and code on!"
