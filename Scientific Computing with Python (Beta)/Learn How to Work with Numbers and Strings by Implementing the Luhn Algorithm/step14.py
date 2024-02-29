@@ -27,3 +27,8 @@ def main():
     verify_card_number(translated_card_number)
 
 main()
+
+
+# Output:
+# >>> 4111111145551142
+# >>> 2411555411111114
