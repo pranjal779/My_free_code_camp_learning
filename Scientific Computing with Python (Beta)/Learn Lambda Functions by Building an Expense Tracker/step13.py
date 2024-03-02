@@ -29,3 +29,6 @@ print(map(test, [2, 3, 5, 8]))
 
 
 expenses = []
+
+# Output:
+# >>> <map object at 0x1098e80>
