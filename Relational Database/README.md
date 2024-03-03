@@ -24,3 +24,11 @@ https://www.freecodecamp.org/news/how-to-run-freecodecamps-relational-databases-
 PostgreSQL is an object-relational database management system (ORDBMS)
 
 <h2><a href="https://www.postgresql.org/docs/current/">PostgreSQL DOC</a></h2>
+
+
+<h2><a href="https://www.freecodecamp.org/learn/relational-database/#:~:text=Learn%20Bash%20by%20Building%20a%20Boilerplate" alt="Learn Bash by Building a Boilerplate">Learn Bash by Building a Boilerplate</a></h2>
+
+<h2><a href="https://www.freecodecamp.org/learn/relational-database/#learn-bash-by-building-a-boilerplate:~:text=Learn%20Relational%20Databases%20by%20Building%20a%20Mario%20Database" alt="Learn Relational Databases by Building a Mario Database">Learn Relational Databases by Building a Mario Database</a></h2>
+
+<h2><a href="https://www.freecodecamp.org/learn/relational-database/#learn-bash-by-building-a-boilerplate:~:text=a%20Mario%20Database-,Celestial%20Bodies%20Database,-This%20is%20one" alt="Celestial Bodies Database">Celestial Bodies Database</a></h2>
+
