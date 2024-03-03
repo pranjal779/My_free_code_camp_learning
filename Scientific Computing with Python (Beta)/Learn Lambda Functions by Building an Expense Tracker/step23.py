@@ -1,0 +1,27 @@
+def add_expense(expenses, amount, category):
+    expenses.append({'amount': amount, 'category': category})
+    
+def print_expenses(expenses):
+    for expense in expenses:
+        print(f'Amount: {expense["amount"]}, Category: {expense["category"]}')
+    
+def total_expenses(expenses):
+    return sum(map(lambda expense: expense['amount'], expenses))
+    
+def filter_expenses_by_category(expenses, category):
+    return filter(lambda expense: expense['category'] == category, expenses)
+
+# Step 23
+# The next step is to define the main function, which will be the entry point of the interactive expense tracker program.
+
+# Define a function named main without parameters. Fill the function body with the expenses list you created at the beginning of this project. 
+# You will use this list to store the expense records.
+
+def main():
+    expenses = []
+
+# "It's super effective!"
+
+# 52% complete
+# Learn Lambda Functions by Building an Expense Tracker
+# 52% complete
