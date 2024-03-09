@@ -22,6 +22,9 @@ def main():
 if __name__ == '__main__':
     main()
 
+# Output:
+# >>> a_long_and_complex_string
+
 # "The town is now red!"
 
 # 64% complete
