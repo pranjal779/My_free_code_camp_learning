@@ -33,3 +33,7 @@ Learn Python List Comprehension by Building a Case Converter Program
 
 if __name__ == '__main__':
     main()
+
+
+#  Output:
+# >>> i_am_a_pascal_cased_string
