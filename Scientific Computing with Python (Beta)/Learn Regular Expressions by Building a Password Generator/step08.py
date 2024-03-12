@@ -1,6 +1,7 @@
 '''
 Step 8
-It is a common convention to place import statements at the top of your code. And additionally, in case of multiple import statements, sort them in alphabetical order to improve readability.
+It is a common convention to place import statements at the top of your code. 
+And additionally, in case of multiple import statements, sort them in alphabetical order to improve readability.
 
 At the top of your code, import the random module.
 '''
