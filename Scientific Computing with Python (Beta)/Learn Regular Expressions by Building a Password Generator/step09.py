@@ -14,7 +14,8 @@ print(all_characters)
 
 '''
 Step 9
-The random module contains a pseudo-random number generator. Most of its functionalities depend on the random() function, which returns a floating point number in the range between 0.0 (inclusive) and 1.0 (exclusive).
+The random module contains a pseudo-random number generator. Most of its functionalities depend on the random() function, 
+which returns a floating point number in the range between 0.0 (inclusive) and 1.0 (exclusive).
 
 Call the random() function and print the result.
 '''
