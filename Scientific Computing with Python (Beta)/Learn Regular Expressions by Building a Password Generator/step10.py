@@ -32,3 +32,7 @@ print(random.choice(all_characters))
 Learn Regular Expressions by Building a Password Generator
 14% complete
 '''
+
+# Output:
+# >>> abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!"#$%&'()*+,-./:;<=>?@[\]^_`{|}~
+# >>> u
