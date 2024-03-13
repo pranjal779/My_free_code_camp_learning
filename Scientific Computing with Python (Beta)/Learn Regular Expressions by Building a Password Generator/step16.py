@@ -17,3 +17,8 @@ def generate_password(length):
     password = ''
     # Generate password
     
+# "The world rejoices!"
+
+# 22% complete
+# Learn Regular Expressions by Building a Password Generator
+# 22% complete
