@@ -24,6 +24,9 @@ def generate_password(length):
 new_password = generate_password(8)
 print(new_password)
 
+# Output:
+# >>> mDClZDNL
+
 # "Even sad panda smiles!"
 
 # 29% complete
