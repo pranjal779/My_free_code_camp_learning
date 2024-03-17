@@ -1,0 +1,6 @@
+# FCC-Django4E-Github-Private
+FCC-Django4E-Github-Private is a optional chapter with the Django4E FCC course 
+
+
+## [Django For Everybody - Full Python University Course](https://www.youtube.com/watch?v=o0XbHvKxw7Y&t=12548s&ab_channel=freeCodeCamp.org](https://youtu.be/o0XbHvKxw7Y?si=bcITtQZnM1qwk21k&t=12587)https://youtu.be/o0XbHvKxw7Y?si=bcITtQZnM1qwk21k&t=12587)
+- 3:29:47
