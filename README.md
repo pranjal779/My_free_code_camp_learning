@@ -21,6 +21,8 @@ and refer bookmarks
 
 ## [Scientific Computing with Python (Beta)](https://www.freecodecamp.org/learn/scientific-computing-with-python/)
 
+## [ytCoding -> Django For Everybody - Full Python University Course](https://www.youtube.com/watch?v=o0XbHvKxw7Y&t=12548s&ab_channel=freeCodeCamp.org)
+
 <hr>
 
 replit badge:
