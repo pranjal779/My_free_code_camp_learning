@@ -36,6 +36,9 @@ pattern = re.compile('l')
 quote = 'Not all those who wander are lost.'
 print(pattern.search(quote))
 
+# Output:
+# >>> <re.Match object; span=(5, 6), match='l'>
+
 # Congratulations, your code passes. Submit your code to continue.
 
 # "Gotta code 'em all!"
