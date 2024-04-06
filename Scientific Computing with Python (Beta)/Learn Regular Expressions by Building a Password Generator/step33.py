@@ -33,6 +33,8 @@ def generate_password(length, nums, special_chars, uppercase, lowercase):
 
 # Replace the search() call with findall() and check the output.
 
+
+
 # Output:
 # >>> ['ll', 'l']
 
