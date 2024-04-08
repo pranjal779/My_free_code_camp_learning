@@ -18,7 +18,7 @@ def generate_password(length, nums, special_chars, uppercase, lowercase):
         for _ in range(length):
             password += secrets.choice(all_characters)
 
-#       Step 37
+# Step 37
 # Now, modify the pattern in your constraint tuple to indicate the range of all digits using square brackets.
       
         constraints = [
