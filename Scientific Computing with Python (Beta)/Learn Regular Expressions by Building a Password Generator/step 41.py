@@ -34,7 +34,7 @@ def generate_password(length, nums, special_chars, uppercase, lowercase):
 
 # 57% complete
 # Learn Regular Expressions by Building a Password Generator
-# 57% complete
+# 57% complete.
        
     return password
     
