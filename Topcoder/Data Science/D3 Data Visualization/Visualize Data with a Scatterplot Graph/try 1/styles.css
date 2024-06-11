@@ -1,0 +1,38 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    margin: 0;
+}
+
+#title {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+#container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#scatterplot {
+    background: #f4f4f4;
+    border: 1px solid #ddd;
+}
+
+.dot {
+    stroke: #000;
+    stroke-width: 1px;
+}
+
+.tooltip {
+    position: absolute;
+    background: #fff;
+    border: 1px solid #ddd;
+    padding: 5px;
+    opacity: 0.9;
+}
