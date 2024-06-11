@@ -6,6 +6,11 @@
 
 [Resource Repo](https://github.com/ine-rmotr-curriculum/FreeCodeCamp-Pandas-Real-Life-Example)
 
+### To fireup the jupyterLab engine in terminal:  
+```sh
+jupyter lab
+```
+
 # Here are the direct links to the official documentation pages for the key libraries used in data science with Python:
 
 [NumPy Documentation](https://numpy.org/doc/stable/)  
