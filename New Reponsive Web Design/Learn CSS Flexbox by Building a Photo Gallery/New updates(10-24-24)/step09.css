@@ -1,0 +1,29 @@
+<!-- 
+Step 9
+The border-box sizing model does the opposite of content-box. The total width of the element, including padding and border, will be the explicit width set. The content of the element will shrink to make room for the padding and border.
+
+Change the box-sizing property to border-box. Notice how your blue image borders now fit within your red gallery border.
+ -->
+
+* {
+  box-sizing: border-box;
+}
+
+<!-- "This is the way!"
+
+96% complete
+Learn CSS Flexbox by Building a Photo Gallery
+96% complete
+ -->
+
+
+ .gallery {
+  border: 5px solid red;
+  width: 50%;
+}
+
+img {
+  width: 100%;
+  border: 5px solid blue;
+  padding: 5px;
+}
