@@ -1,4 +1,4 @@
-# Learn Intermediate CSS by Building a Cat Painting, Not started
+# Learn Intermediate CSS by Building a Cat Painting
 
 ### Mastering CSS positioning is essential for creating visually appealing and responsive web layouts
 
