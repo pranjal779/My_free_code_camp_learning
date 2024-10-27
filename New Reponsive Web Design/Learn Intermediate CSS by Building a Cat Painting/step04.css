@@ -1,0 +1,15 @@
+/* Step 4
+Use the universal selector to add box-sizing: border-box; to your CSS. This ensures elements include padding and border in their specified width and height. */
+
+*{
+  box-sizing: border-box;
+}
+
+/* Congratulations, your code passes. Submit your code to continue.
+
+"Everything's coming up Milhouse!"
+
+5% complete
+Learn Intermediate CSS by Building a Cat Painting
+5% complete
+ */
