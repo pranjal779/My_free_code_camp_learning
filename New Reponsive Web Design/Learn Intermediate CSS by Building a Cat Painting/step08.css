@@ -1,0 +1,29 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #c9d2fc;
+}
+/* 
+Step 8
+To see the .cat-head element, give it a linear gradient background with #5e5e5e at 85% and #45454f at 100%.
+
+You might not notice the difference between these two colors, but they are there. */
+
+.cat-head {
+  width: 205px;
+  height: 180px;
+  border: 1px solid #000;
+  border-radius: 46%;
+  background: linear-gradient(#5e5e5e 85%, #45454f 100%);
+}
+
+/* Congratulations, your code passes. Submit your code to continue.
+
+"Onward!"
+
+10% complete
+Learn Intermediate CSS by Building a Cat Painting
+10% complete
+ */
