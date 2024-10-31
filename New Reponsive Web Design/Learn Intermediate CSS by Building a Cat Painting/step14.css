@@ -1,0 +1,42 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #c9d2fc;
+}
+
+.cat-head {
+/* Step 14
+Now replace the position property value of your .cat-head with fixed. Leave both top and left as they are.
+
+After that, scroll up and down to see how the fixed value works. */
+
+  position: fixed;
+  top: 100px;
+  left: 100px;
+
+/* Congratulations, your code passes. Submit your code to continue.
+
+"Off the charts!"
+
+17% complete
+Learn Intermediate CSS by Building a Cat Painting
+17% complete
+ */
+
+  background: linear-gradient(#5e5e5e 85%, #45454f 100%);
+  width: 205px;
+  height: 180px;
+  border: 1px solid #000;
+  border-radius: 46%;
+}
+
+.box {
+  width: 200px;
+  height: 600px;
+  background-color: #000;
+  position: absolute;
+  left: 650px;
+  top: 800px;
+}
