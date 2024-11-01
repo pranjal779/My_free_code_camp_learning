@@ -1,0 +1,42 @@
+/* Step 24
+Now you can begin working on your cat's ears.
+
+Clean up your review code by removing the .cat-right-ear selector and all of its properties.
+
+Using a class selector, give the .cat-left-ear element a left and right border of 35px solid transparent each. Also, set the bottom border to 70px solid #5e5e5e. */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #c9d2fc;
+}
+
+.cat-head {
+  position: absolute;
+  right: 0;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  background: linear-gradient(#5e5e5e 85%, #45454f 100%);
+  width: 205px;
+  height: 180px;
+  border: 1px solid #000;
+  border-radius: 46%;
+}
+
+.cat-left-ear {
+  border-left: 35px solid transparent;
+  border-right: 35px solid transparent;
+  border-bottom: 70px solid #5e5e5e;
+}
+
+/* Congratulations, your code passes. Submit your code to continue.
+
+"It's super effective!"
+
+29% complete
+Learn Intermediate CSS by Building a Cat Painting
+29% complete */
