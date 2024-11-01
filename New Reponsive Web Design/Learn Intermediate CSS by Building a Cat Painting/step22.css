@@ -1,0 +1,47 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #c9d2fc;
+}
+
+.cat-head {
+  position: absolute;
+  right: 0;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  background: linear-gradient(#5e5e5e 85%, #45454f 100%);
+  width: 205px;
+  height: 180px;
+  border: 1px solid #000;
+  border-radius: 46%;
+}
+
+/* Step 22
+Now you will learn a CSS trick to draw triangles.
+
+This will be used to draw ears on the cat.
+
+Using a class selector, give the .cat-right-ear element height and width properties set to 100px. Set the background-color to white. Set the left and right borders to 35px solid blue. Set the top and bottom borders to 35px solid red. */
+
+.cat-right-ear {
+  height: 100px;
+  width: 100px;
+  background-color: white;
+  border-left: 35px solid blue;
+  border-right: 35px solid blue;
+  border-top: 35px solid red;
+  border-bottom: 35px solid red;
+}
+
+/* Congratulations, your code passes. Submit your code to continue.
+
+"Tubular!"
+
+27% complete
+Learn Intermediate CSS by Building a Cat Painting
+27% complete
+ */
