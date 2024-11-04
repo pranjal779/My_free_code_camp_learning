@@ -36,9 +36,12 @@ body {
   position: absolute;
   top: -26px;
   left: 163px;
+  
 /*   Step 30
 As you did for the left ear, rotate the right ear at 45 degrees. */
+  
   transform: rotate(45deg);
+  
 /*   Congratulations, your code passes. Submit your code to continue.
 
 "Bring that rain!"
@@ -46,6 +49,7 @@ As you did for the left ear, rotate the right ear at 45 degrees. */
 37% complete
 Learn Intermediate CSS by Building a Cat Painting
 37% complete */
+  
   border-left: 35px solid transparent;
   border-right: 35px solid transparent;
   border-bottom: 70px solid #5e5e5e;
