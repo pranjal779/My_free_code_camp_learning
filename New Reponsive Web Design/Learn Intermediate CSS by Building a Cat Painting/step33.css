@@ -1,0 +1,57 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #c9d2fc;
+}
+
+.cat-head {
+  position: absolute;
+  right: 0;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  background: linear-gradient(#5e5e5e 85%, #45454f 100%);
+  width: 205px;
+  height: 180px;
+  border: 1px solid #000;
+  border-radius: 46%;
+}
+
+.cat-left-ear {
+  position: absolute;
+  top: -26px;
+  left: -31px;
+/*   Step 33
+That's not the behavior you want. You should make the ears display over the head so the borders that overlap with them don't show.
+
+Instead of -1, set the z-index property of the left ear to 1. */
+  z-index: 1;
+/*   Congratulations, your code passes. Submit your code to continue.
+
+"Legen - wait for it - dary!"
+
+40% complete
+Learn Intermediate CSS by Building a Cat Painting
+40% complete */
+  border-top-left-radius: 90px;
+  border-top-right-radius: 10px;
+  transform: rotate(-45deg);
+  border-left: 35px solid transparent;
+  border-right: 35px solid transparent;
+  border-bottom: 70px solid #5e5e5e;
+}
+
+.cat-right-ear {
+  position: absolute;
+  top: -26px;
+  left: 163px;
+  transform: rotate(45deg);
+  border-top-left-radius: 90px;
+  border-top-right-radius: 10px;
+  border-left: 35px solid transparent;
+  border-right: 35px solid transparent;
+  border-bottom: 70px solid #5e5e5e;
+}
