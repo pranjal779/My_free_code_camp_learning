@@ -62,4 +62,4 @@ makeServerRequest
 - Since your code correctly handles both the `true` and `false` cases, the tests pass.
 - If you want to test the behavior of your code outside of the FreeCodeCamp environment, you need to explicitly set `responseFromServer` to test both cases.
 
-I hope this clears up your confusion! Let me know if you have any more questions. 😊
+I hope this clears up your confusion! Let me know if you have any more questions. 😊😊
