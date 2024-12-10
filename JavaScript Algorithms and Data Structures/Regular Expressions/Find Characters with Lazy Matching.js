@@ -17,7 +17,7 @@ let myRegex = /<[a-z].*?>/; // Change this line
 let result = text.match(myRegex);
 
 // Regular Expressions
-// 42% complete
+// 42% complete.
 
 // Tests
 // Passed:1. The result variable should be an array with <h1> in it
