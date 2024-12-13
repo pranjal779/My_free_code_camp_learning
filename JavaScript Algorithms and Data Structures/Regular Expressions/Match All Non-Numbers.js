@@ -13,7 +13,7 @@ let result = movieName.match(noNumRegex).length;
 // 64% complete
 
 // Tests
-// Passed:1. Your regex should use the shortcut character to match non-digit characters
+// Passed:1. Your regex should use the shortcut character to match non-digit characters.
 // Passed:2. Your regex should use the global flag.
 // Passed:3. Your regex should find no non-digits in the string 9.
 // Passed:4. Your regex should find 6 non-digits in the string Catch 22.
