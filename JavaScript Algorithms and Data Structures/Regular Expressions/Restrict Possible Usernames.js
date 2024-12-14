@@ -35,3 +35,32 @@ let result = userCheck.test(username);
 // Passed:11. Your regex should not match the string c57bT3
 // Passed:12. Your regex should match the string AB1
 // Passed:13. Your regex should not match the string J%4
+
+
+let username = "JackOfAllTrades";
+let userCheck = /^[a-z][a-z]+\d*$|^[a-z]\d\d+$/i;
+let result = userCheck.test(username);
+console.log(result)
+// Code Explanation
+// 1) ^ - start of input
+// 2) [a-z] - first character is a letter
+// 3) [a-z]+ - following characters are letters
+// 4) \d*$ - input ends with 0 or more digits
+// 5) | - or
+// 6) ^[a-z] - first character is a letter
+// 7) \d\d+ - following characters are 2 or more digits
+// 8) $ - end of input
+
+
+let username = "JackOfAllTrades";
+const userCheck = /^[a-z]([0-9]{2,}|[a-z]+\d*)$/i;
+let result = userCheck.test(username);
+// Code Explanation
+// ^ - start of input
+// [a-z] - first character is a letter
+// [0-9]{2,} - ends with two or more numbers
+// | - or
+// [a-z]+ - has one or more letters next
+// \d* - and ends with zero or more numbers
+// $ - end of input
+// i - ignore case of input
