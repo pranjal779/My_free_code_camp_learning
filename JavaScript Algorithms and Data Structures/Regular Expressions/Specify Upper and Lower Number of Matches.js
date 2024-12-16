@@ -1,4 +1,4 @@
-// Specify Upper and Lower Number of Matches
+// Specify Upper and Lower Number of Matches (Quantity specifiers)
 // Recall that you use the plus sign + to look for one or more characters and the asterisk * to look for zero or more characters.
 //  These are convenient but sometimes you want to match a certain range of patterns.
 
