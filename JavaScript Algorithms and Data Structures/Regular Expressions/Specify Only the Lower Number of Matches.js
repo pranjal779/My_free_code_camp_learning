@@ -22,6 +22,9 @@ let haStr = "Hazzzzah";
 let haRegex = /Haz{4,}ah/gi; // Change this line
 let result = haRegex.test(haStr);
 
+// Regular Expressions
+// 79% complete
+
 // Tests
 // Passed:1. Your regex should use curly brackets.
 // Passed:2. Your regex should not match the string Hazzah
