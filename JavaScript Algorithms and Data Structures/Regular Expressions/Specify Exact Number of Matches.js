@@ -27,3 +27,6 @@ let result = timRegex.test(timStr);
 // Passed:4. Your regex should not match the string Timmmber
 // Passed:5. Your regex should match the string Timmmmber
 // Passed:6. Your regex should not match the string Timber with 30 m's in it.
+
+// Regular Expressions
+// 82% complete
