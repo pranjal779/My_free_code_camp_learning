@@ -1,4 +1,4 @@
-# Certified Full Stack Developer Curriculum
+# [Certified Full Stack Developer Curriculum](https://www.freecodecamp.org/learn/full-stack-developer/)
 
 - **This course provides a comprehensive pathway to becoming a Certified Full Stack Developer, covering all the essential technologies required to build modern, scalable web applications from start to finish.**
 
