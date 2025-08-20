@@ -16,3 +16,9 @@ my_list.append(3)
 print(my_list)
 
 print(my_list[0])
+
+
+'''
+[1, 2, 3]
+1
+'''
