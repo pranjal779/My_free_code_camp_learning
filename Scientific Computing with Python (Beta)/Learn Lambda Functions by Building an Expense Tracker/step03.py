@@ -1,4 +1,4 @@
-```
+'''
 Step 3
 Python has a handful of list methods. Such as methods for adding or removing list items.
 
@@ -11,7 +11,7 @@ example_list.append(7)
 example_list now is [4, 5, 6, 7].
 
 Try to use the append() method to add 3 to my_list. Then print the list.
-```
+'''
 
 my_list = [1, 2]
 
