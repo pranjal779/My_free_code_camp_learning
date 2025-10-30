@@ -85,3 +85,48 @@ Which of the following is the correct syntax for a boolean attribute?
 <input type="checkbox" checked="off">
 
 <input type="checkbox" checked="isChecked">
+
+
+
+-------------------------------
+
+Questions
+
+Which of the following is an example of a boolean attribute?
+
+
+src
+
+href
+
+disabled
+Correct!
+
+
+alt
+
+What is the role of an attribute in HTML?
+
+
+Attributes provide additional information and help define the behavior for HTML elements.
+Correct!
+
+
+Attributes change the background color of an element.
+
+Attributes change the font size of an element.
+
+Attributes add JavaScript functionality to an element.
+
+Which of the following is the correct syntax for a boolean attribute?
+
+
+<input type="checkbox" checked>
+Correct!
+
+
+<input type="checkbox" checked="on">
+
+<input type="checkbox" checked="off">
+
+<input type="checkbox" checked="isChecked">
