@@ -8,6 +8,6 @@ In these lessons, you will learn about the HTML boilerplate which is a ready-mad
 
 You will learn how to work with the **```link```** element, **```meta```** element and more.
 
-- What Is the Role of the Link Element in HTML, and How Can It Be Used to Link to External Stylesheets?
-- What Is an HTML Boilerplate, and Why Is It Important?
-- What Is UTF-8 Character Encoding, and Why Is It Needed?
+- [What Is the Role of the Link Element in HTML, and How Can It Be Used to Link to External Stylesheets?](https://www.freecodecamp.org/learn/full-stack-developer/lecture-understanding-the-html-boilerplate/what-is-the-role-of-the-link-element-in-html)
+- [What Is an HTML Boilerplate, and Why Is It Important?](https://www.freecodecamp.org/learn/full-stack-developer/lecture-understanding-the-html-boilerplate/what-is-an-html-boilerplate)
+- [What Is UTF-8 Character Encoding, and Why Is It Needed?](https://www.freecodecamp.org/learn/full-stack-developer/lecture-understanding-the-html-boilerplate/what-is-utf-8-character-encoding)
