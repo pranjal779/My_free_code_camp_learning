@@ -1,5 +1,7 @@
 # Theory - Understanding the HTML Boilerplate
 
+[Understanding the HTML Boilerplate](https://www.freecodecamp.org/learn/full-stack-developer/lecture-understanding-the-html-boilerplate/what-is-the-role-of-the-link-element-in-html)
+
 ### Theory
 ### Understanding the HTML Boilerplate, Not started
 In these lessons, you will learn about the HTML boilerplate which is a ready-made template for your webpages.
