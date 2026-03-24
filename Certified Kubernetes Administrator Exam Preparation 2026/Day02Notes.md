@@ -9,4 +9,6 @@ Understanding the Kubernetes Architecture
 Core Kubernetes Objects  
 Setting Up Your CKA Practice Environment  
 
-<img width="1867" height="1213" alt="image" src="https://github.com/user-attachments/assets/55698bc9-22a2-4204-b86a-87123664a9b2" />
+<img width="1867" height="1213" alt="image" src="https://github.com/user-attachments/assets/55698bc9-22a2-4204-b86a-87123664a9b2" /> 
+<img width="1857" height="1222" alt="image" src="https://github.com/user-attachments/assets/0be6d708-877c-475c-93a9-f9d466dadb21" />
+
