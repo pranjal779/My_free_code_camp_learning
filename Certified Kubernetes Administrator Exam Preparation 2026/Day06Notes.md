@@ -593,4 +593,8 @@ kubeadm join 172.%%.**.+++:1122 (sample Ip) --token RE.Dacted \
 
 ╭─   pran779  ~/k8practice                                      4m 1.817s   20:39:29 
 ╰─ $
+
+╭─   pran779  ~/k8practice   23:36:06  ╰─ $ kubectl taint node --all node-role.kubernetes.io/control-plane-node/ubuntu untained error: at least one taint update is required
+
+╭─   pran779  ~/k8practice    1.223s   23:39:17  ╰─ $ kubectl taint node --all node-role.kubernetes.io/control-plane- node/pranjal779 untainted
 ```
