@@ -405,3 +405,244 @@ Apr 04 14:28:19 Pranjal779 kubelet[22346]: E0404 14:28:19.687495   22346 kubelet
 lines 1-23/23 (END)
 
 ```
+
+
+```sh
+╭─   pran779  ~                                                            3.431s   17:11:46 
+╰─ $ sudo systemctl restart kubelet
+
+╭─   pran779  ~                                                                        17:12:28 
+╰─ $ sudo systemctl status kubelet
+● kubelet.service - kubelet: The Kubernetes Node Agent
+     Loaded: loaded (/lib/systemd/system/kubelet.service; enabled; vendor preset: enabled)
+    Drop-In: /usr/lib/systemd/system/kubelet.service.d
+             └─10-kubeadm.conf
+     Active: activating (auto-restart) (Result: exit-code) since Sat 2026-04-04 17:12:28 IST; 5s ago
+       Docs: https://kubernetes.io/docs/
+    Process: 1267 ExecStart=/usr/bin/kubelet $KUBELET_KUBECONFIG_ARGS $KUBELET_CONFIG_ARGS $KUBELET_KU>
+   Main PID: 1267 (code=exited, status=1/FAILURE)
+        CPU: 163ms
+
+
+╭─   pran779  ~                                                                        17:09:24 
+╰─ $ sudo systemctl status containerd
+[sudo] password for pran779:
+● containerd.service - containerd container runtime
+     Loaded: loaded (/lib/systemd/system/containerd.service; enabled; vendor preset: enabled)
+     Active: active (running) since Sat 2026-04-04 17:08:11 IST; 1min 47s ago
+       Docs: https://containerd.io
+    Process: 295 ExecStartPre=/sbin/modprobe overlay (code=exited, status=0/SUCCESS)
+   Main PID: 311 (containerd)
+      Tasks: 34
+     Memory: 65.5M
+        CPU: 902ms
+     CGroup: /system.slice/containerd.service
+             └─311 /usr/bin/containerd
+
+Apr 04 17:08:11 Pranjal779 containerd[311]: time="2026-04-04T17:08:11.106194784+05:30" level=info msg=>
+Apr 04 17:08:11 Pranjal779 containerd[311]: time="2026-04-04T17:08:11.106475278+05:30" level=info msg=>
+Apr 04 17:08:11 Pranjal779 containerd[311]: time="2026-04-04T17:08:11.122482461+05:30" level=info msg=>
+Apr 04 17:08:11 Pranjal779 containerd[311]: time="2026-04-04T17:08:11.128148261+05:30" level=info msg=>
+Apr 04 17:08:11 Pranjal779 containerd[311]: time="2026-04-04T17:08:11.279767102+05:30" level=info msg=>
+Apr 04 17:08:11 Pranjal779 containerd[311]: time="2026-04-04T17:08:11.279934111+05:30" level=info msg=>
+Apr 04 17:08:11 Pranjal779 containerd[311]: time="2026-04-04T17:08:11.279966793+05:30" level=info msg=>
+Apr 04 17:08:11 Pranjal779 containerd[311]: time="2026-04-04T17:08:11.279980559+05:30" level=info msg=>
+Apr 04 17:08:11 Pranjal779 containerd[311]: time="2026-04-04T17:08:11.280200068+05:30" level=info msg=>
+Apr 04 17:08:11 Pranjal779 systemd[1]: Started containerd container runtime.
+
+╭─   pran779  ~                                                             5.61s   17:10:00 
+╰─ $ sudo systemctl status kubelet
+● kubelet.service - kubelet: The Kubernetes Node Agent
+     Loaded: loaded (/lib/systemd/system/kubelet.service; enabled; vendor preset: enabled)
+    Drop-In: /usr/lib/systemd/system/kubelet.service.d
+             └─10-kubeadm.conf
+     Active: activating (auto-restart) (Result: exit-code) since Sat 2026-04-04 17:10:04 IST; 3s ago
+       Docs: https://kubernetes.io/docs/
+    Process: 1040 ExecStart=/usr/bin/kubelet $KUBELET_KUBECONFIG_ARGS $KUBELET_CONFIG_ARGS $KUBELET_KU>
+   Main PID: 1040 (code=exited, status=1/FAILURE)
+        CPU: 171ms
+
+╭─   pran779  ~                                                            7.141s   17:10:15 
+╰─ $ sudo systemctl status kubelet
+● kubelet.service - kubelet: The Kubernetes Node Agent
+     Loaded: loaded (/lib/systemd/system/kubelet.service; enabled; vendor preset: enabled)
+    Drop-In: /usr/lib/systemd/system/kubelet.service.d
+             └─10-kubeadm.conf
+     Active: activating (auto-restart) (Result: exit-code) since Sat 2026-04-04 17:11:41 IST; 1s ago
+       Docs: https://kubernetes.io/docs/
+    Process: 1172 ExecStart=/usr/bin/kubelet $KUBELET_KUBECONFIG_ARGS $KUBELET_CONFIG_ARGS $KUBELET_KU>
+   Main PID: 1172 (code=exited, status=1/FAILURE)
+        CPU: 174ms
+...skipping...
+● kubelet.service - kubelet: The Kubernetes Node Agent
+     Loaded: loaded (/lib/systemd/system/kubelet.service; enabled; vendor preset: enabled)
+    Drop-In: /usr/lib/systemd/system/kubelet.service.d
+             └─10-kubeadm.conf
+     Active: activating (auto-restart) (Result: exit-code) since Sat 2026-04-04 17:11:41 IST; 1s ago
+       Docs: https://kubernetes.io/docs/
+    Process: 1172 ExecStart=/usr/bin/kubelet $KUBELET_KUBECONFIG_ARGS $KUBELET_CONFIG_ARGS $KUBELET_KU>
+   Main PID: 1172 (code=exited, status=1/FAILURE)
+        CPU: 174ms
+```
+
+<img width="1726" height="1358" alt="image" src="https://github.com/user-attachments/assets/29d9950a-e45c-41c9-be15-419b919b0b69" />
+<img width="2173" height="707" alt="image" src="https://github.com/user-attachments/assets/028779f3-63f4-49df-b498-afa301eb7821" />
+<img width="2528" height="468" alt="image" src="https://github.com/user-attachments/assets/bed8d77f-3d20-429f-b171-56e79c7f73ea" />
+
+<img width="2557" height="1191" alt="image" src="https://github.com/user-attachments/assets/0df2fa8b-cefd-452a-9f35-d1ae03fbcc22" />
+
+
+```sh
+╰─ $ sudo systemctl restart kubelet
+
+╭─   pran779  ~                                                                                                                                                                                   17:25:13 
+╰─ $ sudo systemctl status kubelet
+● kubelet.service - kubelet: The Kubernetes Node Agent
+     Loaded: loaded (/lib/systemd/system/kubelet.service; enabled; vendor preset: enabled)
+    Drop-In: /usr/lib/systemd/system/kubelet.service.d
+             └─10-kubeadm.conf
+     Active: activating (auto-restart) (Result: exit-code) since Sat 2026-04-04 17:25:13 IST; 1s ago
+       Docs: https://kubernetes.io/docs/
+    Process: 2771 ExecStart=/usr/bin/kubelet $KUBELET_KUBECONFIG_ARGS $KUBELET_CONFIG_ARGS $KUBELET_KUBEADM_ARGS $KUBELET_EXTRA_ARGS (code=exited, status=1/FAILURE)
+   Main PID: 2771 (code=exited, status=1/FAILURE)
+        CPU: 166ms
+
+╭─   pran779  ~                                                                                                                                                                                   17:25:15 
+╰─ $ sudo kubeadm init --pod-network-cidr=10.244.0.0/16
+[init] Using Kubernetes version: v1.35.3
+[preflight] Running pre-flight checks
+        [WARNING ContainerRuntimeVersion]: You must update your container runtime to a version that supports the CRI method RuntimeConfig. Falling back to using cgroupDriver from kubelet config will be removed in 1.36. For more information, see https://git.k8s.io/enhancements/keps/sig-node/4033-group-driver-detection-over-cri
+[preflight] Pulling images required for setting up a Kubernetes cluster
+[preflight] This might take a minute or two, depending on the speed of your internet connection
+[preflight] You can also perform this action beforehand using 'kubeadm config images pull'
+W0404 17:25:24.888713    2850 checks.go:906] detected that the sandbox image "registry.k8s.io/pause:3.8" of the container runtime is inconsistent with that used by kubeadm. It is recommended to use "REDACTED/REDACTED" as the CRI sandbox image.
+[certs] Using certificateDir folder "/etc/kubernetes/pki"
+[certs] Generating "ca" certificate and key
+[certs] Generating "apiserver" certificate and key
+[certs] apiserver serving cert is signed for DNS names [kubernetes kubernetes.default kubernetes.default.svc kubernetes.default.svc.cluster.local pranjal779] and IPs [REDACTED REDACTED9]
+[certs] Generating "apiserver-kubelet-client" certificate and key
+[certs] Generating "front-proxy-ca" certificate and key
+[certs] Generating "front-proxy-client" certificate and key
+[certs] Generating "etcd/ca" certificate and key
+[certs] Generating "etcd/server" certificate and key
+[certs] etcd/server serving cert is signed for DNS names [localhost pranjal779] and IPs [REDACTEDREDACTED1 ::1]
+[certs] Generating "etcd/peer" certificate and key
+[certs] etcd/peer serving cert is signed for DNS names [localhost pranjal779] and IPs [REDACTED REDACTED ::1]
+[certs] Generating "etcd/healthcheck-client" certificate and key
+[certs] Generating "apiserver-etcd-client" certificate and key
+[certs] Generating "sa" key and public key
+[kubeconfig] Using kubeconfig folder "/etc/kubernetes"
+[kubeconfig] Writing "admin.conf" kubeconfig file
+[kubeconfig] Writing "super-admin.conf" kubeconfig file
+[kubeconfig] Writing "kubelet.conf" kubeconfig file
+[kubeconfig] Writing "controller-manager.conf" kubeconfig file
+[kubeconfig] Writing "scheduler.conf" kubeconfig file
+[etcd] Creating static Pod manifest for local etcd in "/etc/kubernetes/manifests"
+[control-plane] Using manifest folder "/etc/kubernetes/manifests"
+[control-plane] Creating static Pod manifest for "kube-apiserver"
+[control-plane] Creating static Pod manifest for "kube-controller-manager"
+[control-plane] Creating static Pod manifest for "kube-scheduler"
+[kubelet-start] Writing kubelet environment file with flags to file "/var/lib/kubelet/kubeadm-flags.env"
+[kubelet-start] Writing kubelet configuration to file "/var/lib/kubelet/instance-config.yaml"
+[patches] Applied patch of type "application/strategic-merge-patch+json" to target "kubeletconfiguration"
+[kubelet-start] Writing kubelet configuration to file "/var/lib/kubelet/config.yaml"
+[kubelet-start] Starting the kubelet
+[wait-control-plane] Waiting for the kubelet to boot up the control plane as static Pods from directory "/etc/kubernetes/manifests"
+[kubelet-check] Waiting for a healthy kubelet at http://REDACTED/healthz. This can take up to 4m0s
+[kubelet-check] The kubelet is healthy after 502.078397ms
+[control-plane-check] Waiting for healthy control plane components. This can take up to 4m0s
+[control-plane-check] Checking kube-apiserver at https://REDACTEDlivez
+[control-plane-check] Checking kube-controller-manager at https:/REDACTED/healthz
+[control-plane-check] Checking kube-scheduler at https:/REDACTED/livez
+[control-plane-check] kube-controller-manager is healthy after 2.507255643s
+[control-plane-check] kube-scheduler is healthy after 3.82332415s
+[control-plane-check] kube-apiserver is healthy after 6.502649122s
+[upload-config] Storing the configuration used in ConfigMap "kubeadm-config" in the "kube-system" Namespace
+[kubelet] Creating a ConfigMap "kubelet-config" in namespace kube-system with the configuration for the kubelets in the cluster
+[upload-certs] Skipping phase. Please see --upload-certs
+[mark-control-plane] Marking the node pranjal779 as control-plane by adding the labels: [node-role.kubernetes.io/control-plane node.kubernetes.io/exclude-from-external-load-balancers]
+[mark-control-plane] Marking the node pranjal779 as control-plane by adding the taints [node-role.kubernetes.io/control-plane:NoSchedule]
+[bootstrap-token] Using token: REDACTED.tokenREDACTED
+[bootstrap-token] Configuring bootstrap tokens, cluster-info ConfigMap, RBAC Roles
+[bootstrap-token] Configured RBAC rules to allow Node Bootstrap tokens to get nodes
+[bootstrap-token] Configured RBAC rules to allow Node Bootstrap tokens to post CSRs in order for nodes to get long term certificate credentials
+[bootstrap-token] Configured RBAC rules to allow the csrapprover controller automatically approve CSRs from a Node Bootstrap Token
+[bootstrap-token] Configured RBAC rules to allow certificate rotation for all node client certificates in the cluster
+[bootstrap-token] Creating the "cluster-info" ConfigMap in the "kube-public" namespace
+[kubelet-finalize] Updating "/etc/kubernetes/kubelet.conf" to point to a rotatable kubelet client certificate and key
+[addons] Applied essential addon: CoreDNS
+[addons] Applied essential addon: kube-proxy
+
+Your Kubernetes control-plane has initialized successfully!
+
+To start using your cluster, you need to run the following as a regular user:
+
+  mkdir -p $HOME/.kube
+  sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
+  sudo chown $(id -u):$(id -g) $HOME/.kube/config
+
+Alternatively, if you are the root user, you can run:
+
+  export KUBECONFIG=/etc/kubernetes/admin.conf
+
+You should now deploy a pod network to the cluster.
+Run "kubectl apply -f [podnetwork].yaml" with one of the options listed at:
+  https://kubernetes.io/docs/concepts/cluster-administration/addons/
+
+Then you can join any number of worker nodes by running the following on each as root:
+
+kubeadm join REDACTED:port --token REDACTED.REDACTED \
+        --discovery-token-ca-cert-hash REDACTED:REDACTED
+
+╭─   pran779  ~                                                                                                                                                                      16.645s   17:25:40 
+╰─ $
+```
+
+<img width="1262" height="682" alt="image" src="https://github.com/user-attachments/assets/bbfeda46-888c-421b-a426-540259fe59aa" />
+<img width="1267" height="635" alt="image" src="https://github.com/user-attachments/assets/d39ad4a7-cf5d-45d1-9156-d3d848d2a048" />
+<img width="1257" height="677" alt="image" src="https://github.com/user-attachments/assets/8cfb7818-add6-4bfd-9668-0cfd7f260b97" />
+
+```sh
+╭─   pran779  ~                                                                        17:35:16 
+╰─ $ kubectl apply -f https://raw.githubusercontent.com/coreos/flannel/master/Documentation/kube-flannel.yml
+namespace/kube-flannel created
+clusterrole.rbac.authorization.k8s.io/flannel created
+clusterrolebinding.rbac.authorization.k8s.io/flannel created
+serviceaccount/flannel created
+configmap/kube-flannel-cfg created
+daemonset.apps/kube-flannel-ds created
+
+╭─   pran779  ~                                                            1.601s   17:45:24 
+╰─ $ kubectl get nodes
+NAME         STATUS     ROLES           AGE   VERSION
+pranjal779   NotReady   control-plane   19m   v1.35.3
+
+╭─   pran779  ~                                                             646ms   17:45:32 
+╰─ $ kubectl taint nodes --all node-role.kubernetes.io/control-plane:NoSchedule-
+node/pranjal779 untainted
+
+╭─   pran779  ~                                                             593ms   17:46:49 
+╰─ $ kubectl get nodes
+NAME         STATUS   ROLES           AGE   VERSION
+pranjal779   Ready    control-plane   21m   v1.35.3
+
+╭─   pran779  ~                                                             556ms   17:46:55 
+╰─ $
+
+╭─   pran779  ~                                                             556ms   17:46:55 
+╰─ $ kubectl get pods -n kube-system
+NAME                                 READY   STATUS    RESTARTS   AGE
+coredns-7d764666f9-f6k2g             1/1     Running   0          22m
+coredns-7d764666f9-zfqfh             1/1     Running   0          22m
+etcd-pranjal779                      1/1     Running   3          22m
+kube-apiserver-pranjal779            1/1     Running   3          22m
+kube-controller-manager-pranjal779   1/1     Running   3          22m
+kube-proxy-65ddp                     1/1     Running   0          22m
+kube-scheduler-pranjal779            1/1     Running   3          22m
+
+╭─   pran779  ~                                                             561ms   17:48:18 
+╰─ $
+
+```
+
+<img width="1253" height="686" alt="image" src="https://github.com/user-attachments/assets/508bf402-0da1-4569-bdd7-3a985d122e24" />
