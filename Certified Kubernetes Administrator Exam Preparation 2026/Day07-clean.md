@@ -236,3 +236,57 @@ kube-scheduler-pranjal779            1/1     Running   3          22m
 ╰─ $
 
 ```
+
+
+```sh
+╭─   pran779  ~                                                                        17:35:16 
+╰─ $ kubectl apply -f https://raw.githubusercontent.com/coreos/flannel/master/Documentation/kube-flannel.yml
+namespace/kube-flannel created
+clusterrole.rbac.authorization.k8s.io/flannel created
+clusterrolebinding.rbac.authorization.k8s.io/flannel created
+serviceaccount/flannel created
+configmap/kube-flannel-cfg created
+daemonset.apps/kube-flannel-ds created
+
+╭─   pran779  ~                                                            1.601s   17:45:24 
+╰─ $ kubectl get nodes
+NAME         STATUS     ROLES           AGE   VERSION
+pranjal779   NotReady   control-plane   19m   v1.35.3
+
+╭─   pran779  ~                                                             646ms   17:45:32 
+╰─ $ kubectl taint nodes --all node-role.kubernetes.io/control-plane:NoSchedule-
+node/pranjal779 untainted
+
+╭─   pran779  ~                                                             593ms   17:46:49 
+╰─ $ kubectl get nodes
+NAME         STATUS   ROLES           AGE   VERSION
+pranjal779   Ready    control-plane   21m   v1.35.3
+
+╭─   pran779  ~                                                             556ms   17:46:55 
+╰─ $
+
+╭─   pran779  ~                                                             556ms   17:46:55 
+╰─ $ kubectl get pods -n kube-system
+NAME                                 READY   STATUS    RESTARTS   AGE
+coredns-7d764666f9-f6k2g             1/1     Running   0          22m
+coredns-7d764666f9-zfqfh             1/1     Running   0          22m
+etcd-pranjal779                      1/1     Running   3          22m
+kube-apiserver-pranjal779            1/1     Running   3          22m
+kube-controller-manager-pranjal779   1/1     Running   3          22m
+kube-proxy-65ddp                     1/1     Running   0          22m
+kube-scheduler-pranjal779            1/1     Running   3          22m
+
+╭─   pran779  ~                                                             561ms   17:48:18 
+╰─ $
+```
+
+
+<img width="1262" height="690" alt="image" src="https://github.com/user-attachments/assets/16f41e73-e76a-4538-b2cb-ec0be54da3e7" />
+
+<img width="1267" height="685" alt="image" src="https://github.com/user-attachments/assets/5c179aea-15e1-41f3-ae21-5cb759f01652" />
+
+## kubeadm reset -f
+
+Resets the Kubernetes node by removing the control-plane configuration, cluster state (etcd data), kubelet state, certificates, and Kubernetes manifests. It effectively brings the node back to a pre-initialized state, allowing fresh cluster setup using `kubeadm init`.
+
+Note: This command does not clean up CNI configurations, network rules, or user kubeconfig files.
