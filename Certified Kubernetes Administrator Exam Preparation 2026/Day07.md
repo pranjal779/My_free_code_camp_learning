@@ -646,3 +646,124 @@ kube-scheduler-pranjal779            1/1     Running   3          22m
 ```
 
 <img width="1253" height="686" alt="image" src="https://github.com/user-attachments/assets/508bf402-0da1-4569-bdd7-3a985d122e24" />
+
+<img width="1220" height="851" alt="image" src="https://github.com/user-attachments/assets/6faed771-1b23-4bbd-b7cd-dad5a826bc87" />
+<img width="1233" height="861" alt="image" src="https://github.com/user-attachments/assets/bc61369f-0926-4cae-ae6e-5cd651083252" />
+
+<img width="1267" height="685" alt="image" src="https://github.com/user-attachments/assets/ad6c9668-afe0-49e5-8bc8-669945e028b3" />
+
+# kubeadm reset -f
+
+Resets the Kubernetes node by removing the control-plane configuration, cluster state (etcd data), kubelet state, certificates, and Kubernetes manifests. It effectively brings the node back to a pre-initialized state, allowing fresh cluster setup using `kubeadm init`.  
+
+Note: This command does not clean up CNI configurations, network rules, or user kubeconfig files.  
+
+🧠 What is happening internally (step-by-step)
+From your output, here’s what Kubernetes is doing:
+
+🧩 1. Reads cluster configuration
+Reading configuration from kubeadm-config ConfigMap
+👉 It checks:
+
+How the cluster was initialized
+
+What components exist
+
+🧩 2. Stops Kubernetes services
+Stopping the kubelet service
+👉 This stops:
+
+kubelet (node agent)
+
+which manages all pods on the node
+
+🧩 3. Deletes control-plane components
+Deleting /etc/kubernetes/manifests
+👉 Removes:
+
+kube-apiserver
+
+kube-controller-manager
+
+kube-scheduler
+
+etcd
+
+👉 These are the core control-plane static pods
+
+🧩 4. Deletes etcd data
+Deleted contents of /var/lib/etcd
+👉 This removes:
+
+Entire cluster state
+
+All stored data (pods, configs, secrets, etc.)
+
+👉 Think:
+
+“Cluster memory wiped”
+
+🧩 5. Cleans kubelet state
+Deleting /var/lib/kubelet
+👉 Removes:
+
+Pod metadata
+
+container references
+
+🧩 6. Removes certificates & configs
+Deleting /etc/kubernetes/pki
+Deleting kubeconfig files
+👉 Deletes:
+
+TLS certificates
+
+admin access configs
+
+👉 This breaks:
+
+authentication
+
+API access
+
+⚠️ What it does NOT remove
+This part is VERY important (and often asked):
+
+does not perform cleanup of:
+- CNI plugin config
+- network rules
+- kubeconfig in home
+👉 Meaning:
+
+/etc/cni/ may still exist
+
+iptables rules may remain
+
+$HOME/.kube/config may remain
+
+🧠 Correct interpretation (your understanding)
+You said:
+
+“I am resetting the environment, removing everything”
+
+👉 ❌ Slightly incorrect
+👉 ✅ Correct version:
+
+“I am resetting the Kubernetes cluster configuration on this node, removing control-plane components, cluster state, and Kubernetes-managed configurations — but not the entire system or networking setup.”
+
+🧠 When do we use kubeadm reset?
+✅ Use cases:
+Rebuilding cluster from scratch
+
+Fixing broken cluster
+
+Practicing installation repeatedly
+
+❌ Not used for:
+Deleting pods
+
+Managing workloads
+
+Normal operations
+
+
