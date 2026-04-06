@@ -57,6 +57,23 @@ Extending Kubernetes
 <img width="487" height="817" alt="image" src="https://github.com/user-attachments/assets/303f1493-a803-4ac7-b026-46ca96ef460b" />
 <img width="2420" height="1242" alt="image" src="https://github.com/user-attachments/assets/c71ef409-c4ce-497e-a4eb-63e3fb640c7f" />
 <img width="2431" height="1220" alt="image" src="https://github.com/user-attachments/assets/44836b83-5df3-4af1-9776-2281894e0a7d" />
+<img width="2417" height="1210" alt="image" src="https://github.com/user-attachments/assets/ee6a70bb-ae97-473b-80bf-bcae8212f970" />
+<img width="2425" height="1206" alt="image" src="https://github.com/user-attachments/assets/edfb34f7-2e3c-4cb4-b81c-f230289b31de" />
+
+# Managing Role-Based Access Control (RBAC) - 38:04
+<img width="2377" height="1212" alt="image" src="https://github.com/user-attachments/assets/209d467c-4e0b-4573-90ad-dad7e13b6c97" />
+<img width="2368" height="1195" alt="image" src="https://github.com/user-attachments/assets/22c6f3d4-c592-4eb4-9aaa-7c07852fafdb" />
+<img width="533" height="862" alt="image" src="https://github.com/user-attachments/assets/3138cf13-3e3a-4449-9386-39ce3ac12727" />
+<img width="2397" height="1206" alt="image" src="https://github.com/user-attachments/assets/82474a5b-2f97-4f27-88bf-75f181992537" />
+<img width="2390" height="1207" alt="image" src="https://github.com/user-attachments/assets/0f1b8c8d-5df2-4c35-829a-ef8a84dce42a" />
+<img width="537" height="901" alt="image" src="https://github.com/user-attachments/assets/9092ae0f-06b7-4cd5-8108-72f3f61c39f7" />
+<img width="540" height="786" alt="image" src="https://github.com/user-attachments/assets/bab27753-2469-43c7-8916-94cbc5a4cfbf" />
+<img width="2412" height="1208" alt="image" src="https://github.com/user-attachments/assets/3b211cfe-d201-4059-99bb-ea1325e1b972" />
+<img width="520" height="808" alt="image" src="https://github.com/user-attachments/assets/1d4a52d7-c427-4868-9db7-38f6529c1a36" />
+<img width="2387" height="1205" alt="image" src="https://github.com/user-attachments/assets/38978d8f-553a-4ae0-b5f2-56edb67b3794" />
+<img width="2407" height="1202" alt="image" src="https://github.com/user-attachments/assets/10dddb09-cd7b-4247-af82-4c90e9ef8a1f" />
+<img width="2367" height="1203" alt="image" src="https://github.com/user-attachments/assets/5d6ca40d-c9dd-433c-8dcd-a7deaeeef5e3" />
+
 
 
 
