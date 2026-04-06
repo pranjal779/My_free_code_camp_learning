@@ -56,6 +56,7 @@ Extending Kubernetes
 <img width="2392" height="1210" alt="image" src="https://github.com/user-attachments/assets/6a51e840-84cf-4802-a4fe-02aa4f972d7a" />
 <img width="487" height="817" alt="image" src="https://github.com/user-attachments/assets/303f1493-a803-4ac7-b026-46ca96ef460b" />
 <img width="2420" height="1242" alt="image" src="https://github.com/user-attachments/assets/c71ef409-c4ce-497e-a4eb-63e3fb640c7f" />
+<img width="2431" height="1220" alt="image" src="https://github.com/user-attachments/assets/44836b83-5df3-4af1-9776-2281894e0a7d" />
 
 
 
