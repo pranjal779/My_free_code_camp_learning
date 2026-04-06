@@ -50,6 +50,12 @@ Extending Kubernetes
 
 # Implementing a Highly-Available (HA) Control Plane
 <img width="2417" height="1217" alt="image" src="https://github.com/user-attachments/assets/5a2c57c0-ea98-4dd4-85c2-2ea5bee22107" />
+<img width="1861" height="1163" alt="image" src="https://github.com/user-attachments/assets/b72e3426-7db7-49fa-aab2-e96193620c24" />
+<img width="2435" height="1187" alt="image" src="https://github.com/user-attachments/assets/a961586a-707a-4f0d-ba95-33405955f195" />
+<img width="527" height="842" alt="image" src="https://github.com/user-attachments/assets/382d7c88-f7a2-4c49-90be-a4cc9c63288f" />
+<img width="2392" height="1210" alt="image" src="https://github.com/user-attachments/assets/6a51e840-84cf-4802-a4fe-02aa4f972d7a" />
+<img width="487" height="817" alt="image" src="https://github.com/user-attachments/assets/303f1493-a803-4ac7-b026-46ca96ef460b" />
+<img width="2420" height="1242" alt="image" src="https://github.com/user-attachments/assets/c71ef409-c4ce-497e-a4eb-63e3fb640c7f" />
 
 
 
