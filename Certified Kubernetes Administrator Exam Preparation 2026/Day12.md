@@ -64,6 +64,13 @@
 # Gateway API 1:35:38
 
 <img width="2472" height="1223" alt="image" src="https://github.com/user-attachments/assets/f90e412d-6b8f-46d2-92a9-474f09a6bc51" />
+<img width="2488" height="1207" alt="image" src="https://github.com/user-attachments/assets/2f1a8274-1897-42fd-977b-3df3fc43133c" />
+<img width="500" height="710" alt="image" src="https://github.com/user-attachments/assets/174f69fe-a614-4ee8-a7ea-6e3329dd3756" />
+<img width="2376" height="1217" alt="image" src="https://github.com/user-attachments/assets/4d91e9f4-f55a-478f-b3c7-00d1adf31223" />
+<img width="2392" height="1216" alt="image" src="https://github.com/user-attachments/assets/a3bea1e7-c1e7-418a-ae53-a4e2803fcce4" />
+<img width="2401" height="1207" alt="image" src="https://github.com/user-attachments/assets/1bf1f6c1-0ab8-4cf2-8e1d-45f280e298aa" />
+<img width="2387" height="1208" alt="image" src="https://github.com/user-attachments/assets/a4ba7aca-972f-4855-b8e1-5e13cfd00863" />
+<img width="2393" height="1213" alt="image" src="https://github.com/user-attachments/assets/a5d78e40-76c6-47ee-b337-0677df76dce3" />
 
 
 
