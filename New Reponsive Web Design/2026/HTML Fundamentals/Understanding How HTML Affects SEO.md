@@ -12,3 +12,33 @@
 
 
 ## What Is the Role of Open Graph Tags, and How Do They Affect SEO?
+
+<img width="1920" height="1392" alt="image" src="https://github.com/user-attachments/assets/2b6eb899-0c72-406c-a277-cdf437a2d471" />
+<img width="1282" height="1306" alt="image" src="https://github.com/user-attachments/assets/4dab7c0c-bdaa-480f-bf9d-b62db7406e51" />
+<img width="1260" height="617" alt="image" src="https://github.com/user-attachments/assets/2cd6707a-5467-4bf2-81c9-987589774b05" />
+<img width="1236" height="667" alt="image" src="https://github.com/user-attachments/assets/4a3de842-6244-4c42-8156-deb73e5cc93e" />
+<img width="1232" height="725" alt="image" src="https://github.com/user-attachments/assets/68b87ed2-7348-4ac0-8cfd-4c2666c521e5" />
+<img width="1210" height="606" alt="image" src="https://github.com/user-attachments/assets/7a454094-03f1-46d6-8588-57736bdb97db" />
+<img width="1295" height="760" alt="image" src="https://github.com/user-attachments/assets/7ba77f56-a32e-43d7-8afc-c8b18019a867" />
+<img width="1357" height="996" alt="image" src="https://github.com/user-attachments/assets/f977095c-549d-45cd-ac77-6420ac59934e" />
+<img width="1316" height="787" alt="image" src="https://github.com/user-attachments/assets/a11bad74-f1f2-4801-9e65-e3394365aebb" />
+<img width="1311" height="890" alt="image" src="https://github.com/user-attachments/assets/956913b1-f7ad-4f53-b2c7-fd379b01726d" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
