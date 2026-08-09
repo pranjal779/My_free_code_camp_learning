@@ -34,5 +34,17 @@
 <img width="1218" height="693" alt="image" src="https://github.com/user-attachments/assets/c6de851e-6b4b-40fa-b1e3-75c8e5eba432" />
 <img width="1207" height="683" alt="image" src="https://github.com/user-attachments/assets/b87e2780-e99a-487d-8306-5d3c4ea53ada" />
 
+---
+
+# What Is the Difference Between Slashes, a Single Dot, and Double Dot in Path Syntax?
+
+<img width="1677" height="1433" alt="image" src="https://github.com/user-attachments/assets/0f0759b3-b829-4d04-8a46-565c1fe033dc" />
+<img width="1341" height="731" alt="image" src="https://github.com/user-attachments/assets/1785a790-4381-46c6-a310-23edf80ae343" />
+<img width="1363" height="762" alt="image" src="https://github.com/user-attachments/assets/ef3b3bba-d2f1-4f1d-80f3-06943dcf0b5b" />
+<img width="1317" height="718" alt="image" src="https://github.com/user-attachments/assets/c4e047a1-e60c-4b32-bdca-574e6437570c" />
+<img width="1242" height="701" alt="image" src="https://github.com/user-attachments/assets/2f31c996-222e-4090-8f7b-3dc6079be260" />
+
+---
+
 
 
