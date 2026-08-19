@@ -34,9 +34,42 @@
 ---
 
 
+## How Do You Display Abbreviations in HTML?
 
+<img width="1822" height="1172" alt="image" src="https://github.com/user-attachments/assets/731e7540-cf5f-4e00-a9b2-8f31e8ad43d7" />
+<img width="1671" height="690" alt="image" src="https://github.com/user-attachments/assets/7c516c69-6d15-49ef-b5bd-6f379f2ca76c" />
+<img width="1743" height="787" alt="image" src="https://github.com/user-attachments/assets/7aebecf8-56b1-49f2-8c24-53c4965f9982" />
+<img width="1300" height="908" alt="image" src="https://github.com/user-attachments/assets/daa38f61-de1f-4ccd-a784-19817d295c5d" />
+<img width="1288" height="798" alt="image" src="https://github.com/user-attachments/assets/47829c0c-cdd5-460c-8053-e302ed41e275" />
+<img width="1283" height="737" alt="image" src="https://github.com/user-attachments/assets/413b9250-b3b5-4c99-8004-01ee628e9f72" />
+<img width="1405" height="955" alt="image" src="https://github.com/user-attachments/assets/0adb694e-7708-42f9-a05a-8b5233f27fa5" />
 
+---
 
+## How Do You Display Addresses in HTML?
+
+<img width="1717" height="1115" alt="image" src="https://github.com/user-attachments/assets/a0ec62a1-d280-4d1e-bb9e-ce1f2eda3dfd" />
+<img width="1530" height="813" alt="image" src="https://github.com/user-attachments/assets/d576c235-15b8-41c7-9e2f-0ca8bbd4147b" />
+<img width="1357" height="610" alt="image" src="https://github.com/user-attachments/assets/0a563b8b-28d9-4c46-a965-7219f3171511" />
+<img width="1405" height="585" alt="image" src="https://github.com/user-attachments/assets/b18eb6ff-47b4-43cc-9c17-58814f356c72" />
+<img width="1321" height="607" alt="image" src="https://github.com/user-attachments/assets/560d1600-ac80-49e6-ad61-7356fb11136b" />
+<img width="1281" height="800" alt="image" src="https://github.com/user-attachments/assets/5e24986f-2766-4500-a142-3451a0cd0ca6" />
+<img width="1311" height="747" alt="image" src="https://github.com/user-attachments/assets/acbf2c49-78af-4f03-b618-bd2c35e08dd5" />
+<img width="1262" height="856" alt="image" src="https://github.com/user-attachments/assets/3f330223-c4e0-4e5f-a8fc-fab6b6727a95" />
+
+---
+
+<img width="1665" height="653" alt="image" src="https://github.com/user-attachments/assets/c73336ba-9daf-4b90-b4c6-3ff538d65a15" />
+<img width="1677" height="642" alt="image" src="https://github.com/user-attachments/assets/9f6850b4-fa50-4212-bd2f-49d02fd3b570" />
+<img width="1617" height="857" alt="image" src="https://github.com/user-attachments/assets/ef18db7f-25a2-4406-a8c4-004d1a14e677" />
+<img width="1302" height="617" alt="image" src="https://github.com/user-attachments/assets/68b3ec7a-05b8-411c-8ebc-5a86aa0802d1" />
+<img width="1317" height="762" alt="image" src="https://github.com/user-attachments/assets/195947ed-73cf-45e7-b0a4-f11f6543a9d7" />
+<img width="1268" height="733" alt="image" src="https://github.com/user-attachments/assets/2156aca5-5264-4664-a11f-653f710ee406" />
+<img width="1277" height="746" alt="image" src="https://github.com/user-attachments/assets/af70384a-cbe7-4812-b3c2-c55525d08789" />
+
+---
+
+<img width="896" height="380" alt="image" src="https://github.com/user-attachments/assets/f2dfc03c-fcbf-4e4d-8217-9cc6f2a27821" />
 
 
 
