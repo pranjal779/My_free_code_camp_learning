@@ -27,3 +27,36 @@
 <img width="1280" height="753" alt="image" src="https://github.com/user-attachments/assets/65a69367-131c-4707-b9ec-d05e78303418" />
 <img width="1212" height="681" alt="image" src="https://github.com/user-attachments/assets/b01ca770-3c91-4b5b-b8e3-b6d84024836b" />
 <img width="1232" height="672" alt="image" src="https://github.com/user-attachments/assets/6977de72-5dc7-4284-af6c-1fdaa2b53724" />
+
+
+## What Is Client-Side Form Validation in HTML Forms, and What Are Some Examples?
+
+<img width="1216" height="527" alt="image" src="https://github.com/user-attachments/assets/40921ea2-3e0b-4b61-8c8e-7ba98ed1e2ee" />
+<img width="1250" height="647" alt="image" src="https://github.com/user-attachments/assets/b4211186-d948-4d4c-8cfc-5f087b0f29c1" />
+<img width="1492" height="358" alt="image" src="https://github.com/user-attachments/assets/201b7b8f-a9f6-44b1-9c28-b4ff5b66fda2" />
+<img width="1552" height="570" alt="image" src="https://github.com/user-attachments/assets/fed500cb-b246-438c-971d-265f5b956eb1" />
+<img width="1507" height="621" alt="image" src="https://github.com/user-attachments/assets/48de2d8b-f1c0-4f25-882b-c533f570a814" />
+<img width="1522" height="443" alt="image" src="https://github.com/user-attachments/assets/63316fc4-2567-4d3f-88d9-95b4a8e3a61f" />
+<img width="1516" height="352" alt="image" src="https://github.com/user-attachments/assets/de904ee5-c83a-457f-b587-b7a961142382" />
+<img width="1267" height="616" alt="image" src="https://github.com/user-attachments/assets/cef0f0a4-2aa2-46ec-801d-ee9510d81cad" />
+<img width="1228" height="567" alt="image" src="https://github.com/user-attachments/assets/972891bf-2b57-4316-bd31-93327c6a92fd" />
+<img width="1258" height="572" alt="image" src="https://github.com/user-attachments/assets/accc86c6-c536-4de7-9712-1ac6861c4cad" />
+<img width="1103" height="680" alt="image" src="https://github.com/user-attachments/assets/9240abe5-e6be-405f-b297-1ce89bd93529" />
+<img width="1100" height="612" alt="image" src="https://github.com/user-attachments/assets/546aa227-4e76-48be-96be-5c67aa87d060" />
+<img width="1103" height="616" alt="image" src="https://github.com/user-attachments/assets/4863996d-d725-4e43-845c-6f89e157403d" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
