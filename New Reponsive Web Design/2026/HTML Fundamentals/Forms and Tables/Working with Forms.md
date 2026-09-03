@@ -45,6 +45,19 @@
 <img width="1100" height="612" alt="image" src="https://github.com/user-attachments/assets/546aa227-4e76-48be-96be-5c67aa87d060" />
 <img width="1103" height="616" alt="image" src="https://github.com/user-attachments/assets/4863996d-d725-4e43-845c-6f89e157403d" />
 
+## What Are the Different Form States, and Why Are They Important?
+
+<img width="1376" height="662" alt="image" src="https://github.com/user-attachments/assets/27192cd9-a677-4927-bcc3-5b64077f666b" />
+<img width="1427" height="470" alt="image" src="https://github.com/user-attachments/assets/ef71c310-85cd-4bc7-8b0c-e1b88f106752" />
+<img width="1325" height="372" alt="image" src="https://github.com/user-attachments/assets/dba07d49-1986-4edd-8ec8-e8335735f6cd" />
+<img width="1437" height="627" alt="image" src="https://github.com/user-attachments/assets/36676d6e-e4d0-4879-b243-b3f60687ba6d" />
+<img width="1410" height="377" alt="image" src="https://github.com/user-attachments/assets/6250e9ed-10fc-4ffe-8496-e7aed1927233" />
+<img width="1117" height="571" alt="image" src="https://github.com/user-attachments/assets/04972596-fcdb-4e98-9499-2f05b03943ba" />
+<img width="1107" height="517" alt="image" src="https://github.com/user-attachments/assets/e3ea2a95-4e32-4873-b90f-8d0387c3e8c8" />
+<img width="1157" height="630" alt="image" src="https://github.com/user-attachments/assets/3074b889-1a77-4422-8d7f-0823877d6382" />
+<img width="1136" height="655" alt="image" src="https://github.com/user-attachments/assets/e0593561-0ec1-44a5-abc6-3a1776223aa4" />
+<img width="1097" height="616" alt="image" src="https://github.com/user-attachments/assets/c6849f4e-4789-4fbc-9221-e6fc2225066e" />
+<img width="1085" height="632" alt="image" src="https://github.com/user-attachments/assets/d326c7f3-dee6-461f-a068-ee3d12fecefa" />
 
 
 
