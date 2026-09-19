@@ -25,6 +25,9 @@ and refer bookmarks
 
 <hr>
 
+[<img width="697" height="732" alt="image" src="https://github.com/user-attachments/assets/7bbfffa8-4125-4074-bd24-ef5644539842" />](https://lnkd.in/p/dKBFBZ6c)
+
+
 replit badge:
 <br>
 [![Run on Repl.it](https://replit.com/badge/github/pranjal779/undefined)](https://replit.com/new/github/pranjal779/undefined)
