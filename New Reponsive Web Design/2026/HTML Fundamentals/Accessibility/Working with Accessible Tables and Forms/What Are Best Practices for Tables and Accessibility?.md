@@ -1,3 +1,5 @@
+# What Are Best Practices for Tables and Accessibility?
+
 <img width="873" height="197" alt="image" src="https://github.com/user-attachments/assets/5bf35487-ad57-48ee-91bc-23bbd7fd7dd6" />
 <img width="1765" height="1138" alt="image" src="https://github.com/user-attachments/assets/65094c32-d5dd-45e8-b437-7359f9d1ab16" />
 <img width="1422" height="570" alt="image" src="https://github.com/user-attachments/assets/31e64d01-8b6c-492b-8b78-fe47c0afac83" />
