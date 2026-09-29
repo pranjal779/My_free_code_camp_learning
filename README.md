@@ -1,6 +1,10 @@
 # My_free_code_camp_learning
 this for all the learning I did from freecodecamp and to refer them for detailed understanding.
 
+## [freeCodeCamp localhost](https://forum.freecodecamp.org/t/freecodecamp-localhost-a-curriculum-you-can-do-from-your-terminal/356838)
+[<img width="1782" height="1136" alt="image" src="https://github.com/user-attachments/assets/46a3ae61-a923-4f12-ab4f-9970864498bb" />](https://forum.freecodecamp.org/t/freecodecamp-localhost-a-curriculum-you-can-do-from-your-terminal/356838)
+
+
 ## [BackEnd Development](https://www.freecodecamp.org/learn/back-end-development-and-apis/)
 and refer bookmarks
 
